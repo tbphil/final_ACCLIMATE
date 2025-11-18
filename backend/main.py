@@ -1,3 +1,8 @@
+import numpy as np
+# Fix numpy version issue
+if not hasattr(np, 'round_'):
+    np.round_ = np.round
+
 from fastapi import FastAPI
 from fastapi_websocket_pubsub import PubSubEndpoint
 from fastapi.responses import JSONResponse
@@ -13,6 +18,7 @@ from climate import router as climate_router
 from infrastructure import router as infrastructure_router
 from hbom import router as hbom_router 
 from fragility import router as fragility_router
+from user_asset_import import router as import_router
 from cache_manager import cache
 from database import mongo_uri
 
@@ -77,6 +83,7 @@ app.include_router(climate_router)
 app.include_router(infrastructure_router)
 app.include_router(hbom_router)  
 app.include_router(fragility_router)
+app.include_router(import_router)  # User asset import
 app.include_router(data_collectors.router)
 
 # Configure CORS

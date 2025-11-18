@@ -1,0 +1,129 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache
+backend_cache/
+backend/backend_cache/
+*.pkl
+*.pkl.gz
+*.cache
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+sandbox.ipynb
+importHBOM.ipynb
+migrateHBOM.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+response.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Misc root level files
+package-lock.json
+
+# Keep frontend package-lock.json
+!frontend/package-lock.json
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional: Uncomment if these should be ignored
+# backend/fragility_data/
+# backend/infrastructure_data/
+# backend/Mongo/
+# frontend/Mongo/
