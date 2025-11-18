@@ -1,0 +1,32 @@
+.stepper {
+  background-color: unset;
+}
+
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.lasso-header {
+  color: #70728c;
+  font-size: 14px;
+  font-weight: 600;
+
+  &.active {
+    color: #0091ff;
+  }
+}

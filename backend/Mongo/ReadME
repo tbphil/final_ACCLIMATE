@@ -1,0 +1,883 @@
+# Canonical Component Architecture - Technical Documentation
+
+## Overview
+
+The ACCLIMATE system uses a four-collection architecture to connect functional component decompositions (HBOM), failure probability models (fragility curves), real-world infrastructure assets, and a canonical component registry. This architecture enables flexible modeling while maintaining engineering rigor and data integrity.
+
+## Architecture Layers
+
+### Layer 1: Canonical Component Registry (`component_library`)
+
+**Purpose:** Master registry of infrastructure component types with stable identifiers and alias mappings.
+
+**Collection:** `acclimate_db.component_library`
+
+**Document Structure:**
+```json
+{
+  "canonical_uuid": "a19295dd-7f70-5a...",
+  "canonical_name": "Substation",
+  "component_type": "Substation",
+  "sector": "Energy Grid",
+  "aliases": ["Power Station", "Electrical Substation", "Switching Station"],
+  "hbom_baseline_uuid": "f8374851-ef5d-5c...",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-08T...",
+  "updated_at": "2025-10-08T..."
+}
+```
+
+**Key Fields:**
+- `canonical_uuid`: Stable UUID5 generated from component name (namespace: `10000000-0000-0000-0000-000000000000`)
+- `component_type`: Primary linking field used across all collections
+- `aliases`: Array of alternative names for fuzzy matching (handles naming variations from external data sources)
+- `hbom_baseline_uuid`: Links to the detailed functional decomposition in hbom_baseline
+- `hbom_duplicate_count`: Number of duplicate decompositions (from path-based generation)
+
+**Generation:** Created by intersection of hbom_baseline (decompositions that exist) and energy_grid (assets that exist in real world). Only components with both functional knowledge AND real-world instances are included.
+
+**Script:** `build_canonical_registry.py`
+
+---
+
+### Layer 2: HBOM Baseline Decomposition (`hbom_baseline`)
+
+**Purpose:** Hierarchical functional breakdown of infrastructure components based on functional-form methodology (Stone & Wood).
+
+**Collection:** `acclimate_db.hbom_baseline`
+
+**Document Structure:**
+```json
+{
+  "uuid": "f8374851-ef5d-5c...",
+  "label": "Substation",
+  "asset_type": "substation_decomp(1)",
+  "canonical_component_type": "Substation",
+  "level": 1,
+  "node_path": "Substation",
+  "parent_uuid": null,
+  "children_uuids": ["transformer-uuid", "busbar-uuid", "circuit-breaker-uuid"],
+  "metadata": {
+    "created_date": "2025-10-02T...",
+    "source": "baseline_decomposition"
+  }
+}
+```
+
+**Key Fields:**
+- `uuid`: Path-based UUID5 (namespace: `a3d2e5f7-8b9c-4d1e-a2f3-5c6d7e8f9a0b`, key: `asset_type|node_path`)
+- `canonical_component_type`: Links to Layer 1 (inherited from root to all descendants)
+- `parent_uuid` / `children_uuids`: Tree structure references
+- `node_path`: Full hierarchical path (e.g., "Substation > Transformer > Bushings")
+
+**Hierarchical Relationship:**
+- Root nodes (`parent_uuid = null`) represent complete systems
+- Child nodes inherit `canonical_component_type` from their root
+- Example: All components in Substation tree have `canonical_component_type: "Substation"`
+- Nested assets: Wind Farm contains Wind Turbine as a component (level 2)
+
+**UUID Strategy:** Path-based generation ensures deterministic IDs while allowing same component label to exist in different contexts (e.g., "Transformer" in Coal Plant vs Gas Plant have different UUIDs and can have context-specific subcomponents).
+
+**Source Files:** Excel workbooks with hierarchical columns (Asset, Component, Sub-Component, ...)
+
+**Scripts:** 
+- `generate_hbom_baseline.py` - Parse Excel → JSON
+- `load_hbom_to_mongo.py` - Load JSON → MongoDB (upserts by UUID, preserves canonical links)
+- `link_baseline_to_canonical.py` - Add canonical_component_type to nodes
+
+---
+
+### Layer 3: Asset Instances (`energy_grid`)
+
+**Purpose:** Real-world infrastructure assets with geographic location and operational attributes.
+
+**Collection:** `acclimate_db.energy_grid`
+
+**Document Structure:**
+```json
+{
+  "uuid": "faf332ca-0fe4-43ca-8bce-9813d13c4d92",
+  "name": "Calflax Substation",
+  "component_type": "Substation",
+  "latitude": 36.284,
+  "longitude": -120.1221,
+  "spec_overrides": {
+    "max_voltage": 66,
+    "voltage_class": "66.0kV",
+    "lines": 2.0
+  },
+  "owner": "Pacific Gas and Electric Company",
+  "state": "California",
+  "county": "Fresno"
+}
+```
+
+**Key Fields:**
+- `uuid`: Unique identifier for this specific asset instance
+- `component_type`: Links to Layer 1 canonical registry
+- `spec_overrides`: Asset-specific attributes used for fragility curve condition matching
+- `location`: GeoJSON point for spatial queries
+
+**Data Source:** AHA Core infrastructure database (Facility Energy Systems.xlsx)
+
+**Loading:** 
+- `facility_to_json_converter.py` - Excel → JSON (filters zero values, extracts spec_overrides)
+- `load_infrastructure_to_mongo.py` - JSON → MongoDB
+
+**Attribute Handling:** 
+- Universal fields (name, lat/lon, owner, etc.) stored at top level
+- Sector-specific attributes (voltage, capacity, fuel type) stored in `spec_overrides`
+- Zero values excluded (treated as "unknown")
+
+---
+
+### Layer 4: Fragility Curves (`fragility_db`)
+
+**Purpose:** Failure probability models for components under various hazard conditions.
+
+**Collection:** `acclimate_db.fragility_db`
+
+**Document Structure:**
+```json
+{
+  "uuid": "d2090660-0042-54...",
+  "component_uuid": "2ede9233-613a-5b...",
+  "component_name": "Wind Turbine Blade 1 in Parked Condition",
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "blade_number": 1,
+    "operating_state": "parked",
+    "critical_displacement": "0.524m"
+  },
+  "model": "lognormal",
+  "parameters": {"mu": 3.034, "sigma": 0.118},
+  "priority": 80,
+  "is_best_fit": true,
+  "provenance": {
+    "source": "Research citation",
+    "sheet": "Wind",
+    "row": 48
+  }
+}
+```
+
+**Key Fields:**
+- `uuid`: Unique curve identifier (UUID5 based on component + hazard + conditions)
+- `component_uuid`: Links to specific HBOM baseline component
+- `conditions`: Attribute filters for curve applicability
+- `parameters`: Distribution parameters (mu, sigma for lognormal; shape, scale for weibull)
+- `priority` / `is_best_fit`: Selection criteria when multiple curves match
+- `climate_variable`: Which climate variable this curve applies to (tas, sfcWind, hi, etc.)
+
+**Condition Matching:** Multiple curves can exist for the same component with different conditions:
+- Wind Turbine Blades: 12 curves (blade 1/2/3, parked/operating, various displacement thresholds)
+- Substations: Could have curves for different voltage classes (66kV, 115kV, 230kV, 500kV)
+
+**Current Behavior:** First curve per component per hazard is selected (line 107 in hbom_preparers.py)
+
+**Pending:** Store all variants, filter by asset attributes at runtime
+
+**Data Source:** Research Excel compilation (Fragility_Curve_Compilation.xlsx)
+
+**Scripts:**
+- `fragility_research_processor.py` - Excel → JSON (fuzzy matching to HBOM UUIDs)
+- `load_fragility_database.py` - JSON → MongoDB
+
+---
+
+## Data Flow
+
+### Component Lookup Flow
+
+```
+User clicks asset on map
+  ↓
+Frontend: asset.component_type = "Hydroelectric Facility"
+  ↓
+Lookup in hbomDefinitions.components:
+  - Check c.label === "Hydroelectric Facility" (no match)
+  - Check c.canonical_component_type === "Hydroelectric Facility" (no match)
+  - Check c.aliases.includes("Hydroelectric Facility") (MATCH!)
+  ↓
+Found: component with label "Hydroelectric Power Generation Facility"
+  ↓
+Render sunburst with that HBOM tree
+```
+
+### Fragility Computation Flow
+
+```
+Frontend: GET /api/fragility/compute/Energy Grid/Heat Stress
+  ↓
+Backend: fetch_components_by_sector("Energy Grid")
+  → Query hbom_baseline WHERE canonical_component_type EXISTS
+  → Returns all canonical roots + descendants (~750 nodes)
+  ↓
+Backend: fetch_fragilities_by_hazard("Heat Stress", component_uuids)
+  → Query fragility_db WHERE hazard="Heat Stress" AND component_uuid IN [...]
+  → Returns matching fragility curves
+  ↓
+Backend: reconstruct_tree(nodes, curves)
+  → Build nested tree structure from flat nodes
+  → Merge fragility curves into node["hazards"]
+  ↓
+Backend: Load canonical registry
+  → Query component_library for canonical entries with aliases
+  → Build lookup map by component_type
+  ↓
+Backend: prepare_for_frontend(trees, canonical_map)
+  → Add aliases array to each root component
+  → Filter to requested hazard
+  → Clean NaN/Inf values for JSON
+  ↓
+Backend: compute_for_tree(tree, hazard, climate_data)
+  → Apply fragility distribution functions to climate time series
+  → Generate PoF values for each component and timestep
+  → Aggregate child PoFs to parents (series failure logic: 1-(1-p1)(1-p2)...)
+  ↓
+Frontend: Receives HBOM trees with computed fragility_curves
+  → Stores in hbomDefinitions (Pinia store)
+  → Extracts time series for charting: {uuid: {var: [pof_t0, pof_t1, ...]}}
+  → Renders sunburst with PoF-based coloring (green < 25%, yellow < 51%, red >= 51%)
+```
+
+---
+
+## Database Schema
+
+### Collections Overview
+
+| Collection | Purpose | Documents | Indexed Fields |
+|------------|---------|-----------|----------------|
+| component_library | Canonical registry with aliases | ~12 | canonical_uuid, component_type, aliases |
+| hbom_baseline | Functional decompositions | ~923 | uuid, parent_uuid, canonical_component_type |
+| energy_grid | Real-world asset instances | ~58,849 | uuid, component_type, location (2dsphere) |
+| fragility_db | Failure probability curves | ~55 | uuid, component_uuid, hazard, priority |
+
+### Linking Strategy
+
+**Primary Link:** `component_type` (string field, human-readable, used across all collections)
+
+**Connection Graph:**
+```
+energy_grid.component_type 
+  → component_library.component_type (via aliases)
+    → component_library.hbom_baseline_uuid
+      → hbom_baseline.uuid (root node)
+        → hbom_baseline descendants (via parent_uuid/children_uuids)
+          → fragility_db.component_uuid (references any node in tree)
+```
+
+**UUID Hierarchy:**
+- **Canonical UUIDs:** Stable, component-name-based (e.g., `uuid5("canonical:Substation")`)
+- **HBOM UUIDs:** Path-based for context-specific decompositions (e.g., `uuid5("wind_farm|Wind Farm > Wind Turbine > Blades")`)
+- **Asset UUIDs:** Unique per real-world instance (from source data)
+- **Fragility Curve UUIDs:** Unique per curve variant (based on component + hazard + conditions)
+
+---
+
+## Scripts and Workflow
+
+### Building Canonical Registry
+
+**Script:** `backend/scripts/build_canonical_registry.py`
+
+**Purpose:** Creates/updates canonical component registry from intersection of HBOM decompositions and real infrastructure assets.
+
+**Process:**
+1. Query `energy_grid.distinct("component_type")` → real asset types
+2. Query `hbom_baseline` WHERE `parent_uuid = null` → decomposition roots
+3. Find intersection via exact match OR alias match
+4. Generate stable `canonical_uuid` for each matched component
+5. Link to hbom_baseline via `hbom_baseline_uuid` (first root if duplicates exist)
+6. Upsert to `component_library` (preserves existing entries)
+
+**Execution:**
+```bash
+python backend/scripts/build_canonical_registry.py
+```
+
+**Output:**
+```
+UPDATE: 'Substation' → a19295dd... → hbom:f8374851...
+CREATE: 'Hydroelectric Power Generation Facility' → 0b482e85... → hbom:8dc4a5ad...
+SKIP: 'Photovoltaic (PV) Generation Facility' - decomposition exists but no real assets
+```
+
+**Idempotent:** Can be run repeatedly as new decompositions are added or aliases are updated.
+
+---
+
+### Linking Baseline to Canonical
+
+**Script:** `backend/scripts/link_baseline_to_canonical.py`
+
+**Purpose:** Adds `canonical_component_type` field to all hbom_baseline nodes, linking them to the canonical registry.
+
+**Process:**
+1. Load canonical registry (component_library WHERE canonical_uuid EXISTS)
+2. Build mapping: canonical_name → component_type
+3. Update root nodes: set `canonical_component_type` from canonical registry
+4. Recursively propagate to all descendants (children inherit from root)
+
+**Execution:**
+```bash
+python backend/scripts/link_baseline_to_canonical.py
+```
+
+**Output:**
+```
+[2/3] Updating root nodes...
+  Substation → canonical_type: Substation
+  Wind Farm → canonical_type: Wind Farm
+  Updated 12 roots
+
+[3/3] Propagating to child nodes...
+  Updated 750 child nodes
+
+Total updated: 762
+```
+
+**Result:** Every node in hbom_baseline can now be traced back to its canonical component via `canonical_component_type`.
+
+---
+
+### Adding New Decompositions
+
+**Example: Wind Farm Migration**
+
+**Preparation:**
+1. Create Excel workbook with hierarchical structure:
+   - Column headers: Asset, Component, Sub-Component, Sub-Sub-Component, ...
+   - Row example: Wind Farm | Wind Turbine | Rotor | Blades | Carbon Fiber
+2. Place file in `backend/hbom/decomposition_files/`
+
+**Execution:**
+```bash
+# Generate baseline JSON
+python backend/scripts/generate_hbom_baseline.py
+
+# Output: backend/fragility_data/processed/hbom_baseline.json
+# Contains flattened nodes with UUIDs, parent/child relationships
+```
+
+```bash
+# Load to MongoDB (upserts by UUID, preserves existing canonical links)
+python backend/scripts/load_hbom_to_mongo.py
+
+# Output: Nodes added to hbom_baseline collection
+```
+
+```bash
+# Update canonical registry (if component has real assets)
+python backend/scripts/build_canonical_registry.py
+
+# Checks if Wind Farm exists in energy_grid
+# If yes, creates canonical entry with stable UUID
+```
+
+```bash
+# Link nodes to canonical
+python backend/scripts/link_baseline_to_canonical.py
+
+# Adds canonical_component_type to new nodes
+```
+
+**Cleanup (if replacing existing decomposition):**
+```bash
+# Remove old standalone version (dry-run first to verify)
+python backend/scripts/delete_wind_turbine.py --dry-run
+python backend/scripts/delete_wind_turbine.py
+```
+
+---
+
+### Finding and Fixing Name Mismatches
+
+**Script:** `backend/scripts/find_name_mismatches.py`
+
+**Purpose:** Identifies where asset component_type doesn't match HBOM label, suggests aliases to add.
+
+**Process:**
+1. Get all asset types from energy_grid
+2. Get all HBOM labels from hbom_baseline roots
+3. Find exact matches vs. fuzzy matches (string similarity > 60%)
+4. Generate suggested alias additions
+
+**Execution:**
+```bash
+python backend/scripts/find_name_mismatches.py
+```
+
+**Output:**
+```
+LIKELY ALIASES:
+  Hydroelectric Facility
+    → Hydroelectric Power Generation Facility (72.1% similar)
+
+SUGGESTED ALIAS ADDITIONS:
+Add these to ALIAS_MAP in build_canonical_registry.py:
+    "Hydroelectric Power Generation Facility": [..., "Hydroelectric Facility"],
+```
+
+**Workflow:**
+1. Run mismatch finder
+2. Update `ALIAS_MAP` in `build_canonical_registry.py`
+3. Rerun canonical registry builder
+4. Frontend automatically resolves via aliases on next load
+
+---
+
+## Frontend Integration
+
+### Data Loading
+
+**Location:** `src/App.vue` (line 184)
+
+```javascript
+const loadHBOMWithFragility = async () => {
+  const url = `/api/fragility/compute/${sector}/${hazard}`
+  const resp = await fetch(url)
+  const data = await resp.json()
+  
+  // Store HBOM trees with computed fragility curves
+  setHbomDefinitions(data)
+  
+  // Extract time series: {uuid: {var: [pof_over_time]}}
+  const curves = extractFragilityTimeSeries(data)
+  setFragilityCurves(curves)
+}
+```
+
+**Response Structure:**
+```json
+{
+  "sector": "Energy Grid",
+  "components": [
+    {
+      "uuid": "f8374851...",
+      "label": "Substation",
+      "canonical_component_type": "Substation",
+      "aliases": ["Power Station", "Electrical Substation"],
+      "hazards": {
+        "Heat Stress": {
+          "fragility_model": "lognormal",
+          "fragility_params": {"mu": 4.5, "sigma": 0.3},
+          "fragility_curves": {
+            "tas": {
+              "0": {
+                "x_values": [temp_t0, temp_t1, ...],
+                "fc_values": [pof_t0, pof_t1, ...],
+                "final_pof": 0.052
+              }
+            }
+          }
+        }
+      },
+      "subcomponents": [...]
+    }
+  ]
+}
+```
+
+### Sunburst Rendering
+
+**Location:** `src/charting/index.js` (createSunburstChart function)
+
+**Asset-to-HBOM Matching:**
+```javascript
+const facilityType = selectedAsset.value.facilityTypeName  // e.g., "Hydroelectric Facility"
+
+const hbomNode = hbomDefinitions.value?.components?.find(c => 
+  c.label === facilityType ||                    // Exact match
+  c.canonical_component_type === facilityType || // Canonical match
+  c.aliases?.includes(facilityType)              // Alias match
+)
+```
+
+**Alias Resolution:** Handles naming variations between data sources without requiring data standardization.
+
+**Tree Traversal:**
+```javascript
+function traverse(node, parentId, facilityType, climateVar, out) {
+  const uuid = node.uuid
+  const series = fragilityCurves.value[uuid]?.[climateVar]
+  const p_fail = series ? series[currentTimeIndex.value] : 0
+  
+  out.ids.push(node.label)
+  out.parents.push(parentId || '')
+  out.custom.push({ uuid, p_fail })
+  
+  node.subcomponents?.forEach(child => traverse(child, node.label, ...))
+}
+```
+
+**Color Mapping:**
+```javascript
+const color = p_fail === 0 ? '#CCCCCC'      // Gray (no curve)
+            : p_fail < 0.25 ? 'green'       // Low risk
+            : p_fail < 0.51 ? 'yellow'      // Medium risk
+            : 'red'                         // High risk
+```
+
+### Modal Behavior
+
+**Location:** `src/App.vue` (onAssetTypeClick function)
+
+```javascript
+const onAssetTypeClick = (type) => {
+  // Check if HBOM exists before opening modal
+  const hasHbom = hbomDefinitions.value?.components?.find(c => 
+    c.label === type || 
+    c.canonical_component_type === type ||
+    c.aliases?.includes(type)
+  )
+  
+  if (!hasHbom) {
+    console.log(`No HBOM decomposition for ${type}`)
+    return  // Don't open modal
+  }
+  
+  showHbomAnalyticModal.value = true
+}
+```
+
+Prevents modal from opening for asset types without functional decompositions.
+
+---
+
+## Fragility Computation Details
+
+### Distribution Functions
+
+**Lognormal:**
+```python
+z = (log(climate_value) - mu) / sigma
+P(fail) = Φ(z)  # Standard normal CDF
+```
+
+**Weibull:**
+```python
+P(fail) = 1 - exp(-(climate_value/scale)^shape)
+```
+
+**Logistic:**
+```python
+P(fail) = 1 / (1 + exp(-slope * (climate_value - mid_point)))
+```
+
+### Aggregation Logic
+
+**Series Failure (Parent-Child):**
+```python
+# Probability system fails if ANY component fails
+P(system) = 1 - ∏(1 - P(component_i))
+
+# Implementation:
+survival_product = prod(1.0 - p for p in child_pofs)
+parent_pof = 1.0 - survival_product
+```
+
+**Multi-Variable Maximum:**
+```python
+# Overall PoF is worst-case across all climate variables
+component.pof = max(component.pof_by_var.values())
+```
+
+### Time Series Generation
+
+For each component at each timestep:
+1. Apply fragility distribution to climate value
+2. Get instantaneous P(fail) at time t
+3. Store as time series: `[pof_t0, pof_t1, ..., pof_tn]`
+4. Frontend displays on timeline slider
+
+---
+
+## Current State (as of 2025-10-08)
+
+### Completed Tasks
+
+✅ **Canonical Component Architecture**
+- 12 canonical components with stable UUIDs
+- 762 hbom_baseline nodes linked via canonical_component_type
+- Alias resolution working (12+ naming variations handled)
+
+✅ **Wind Farm Integration**
+- Wind Farm HBOM loaded (82 nodes: Wind Farm > Wind Turbine > Rotor/Nacelle/Tower/Foundation)
+- Canonical links established
+- Frontend displays sunburst for Wind Farm assets
+
+✅ **Alias-Based Matching**
+- Backend sends aliases with each component
+- Frontend resolves naming mismatches automatically
+- Works for: Hydroelectric Facility, Concentrated Solar, PV systems
+
+### Pending Tasks
+
+🔲 **Delete Old Standalone Wind Turbine**
+- Script ready: `delete_wind_turbine.py`
+- 37 nodes to remove
+- Blocked: Awaiting confirmation
+
+🔲 **Multi-Curve Condition Selection (Task 3)**
+- Architecture complete
+- Backend stores conditions with each curve
+- Frontend UI for condition selection not implemented
+- Affects: Wind Turbine Blades (12 curve variants), future voltage-class-specific curves
+
+🔲 **Fragility Curve Coverage**
+- Only 1 component has fragility curves (Substation: 1 curve for Heat Stress)
+- Wind Turbine: 17 curves exist but need UUID remapping to new Wind Farm structure
+- Other components: Need research data and curve compilation
+
+---
+
+## Known Issues
+
+### 1. Single-Curve Limitation
+
+**Current Behavior:** When multiple fragility curves exist for a component with different conditions, only the first curve is embedded in the HBOM tree.
+
+**Location:** `backend/hbom/hbom_preparers.py` line 107
+```python
+if hazard not in node["hazards"]:
+    node["hazards"][hazard] = {...}  # Only first curve
+```
+
+**Impact:** Wind Turbine Blades with 12 curve variants (different blade numbers, operating states) only use one arbitrary curve.
+
+**Solution:** Store all variants:
+```python
+if hazard not in node["hazards"]:
+    node["hazards"][hazard] = []
+
+node["hazards"][hazard].append({
+    "fragility_model": curve.get("model"),
+    "fragility_params": curve.get("parameters"),
+    "conditions": curve.get("conditions"),
+    "priority": curve.get("priority")
+})
+```
+
+### 2. No Asset Attribute Filtering
+
+**Current Behavior:** All substations use the same fragility curve regardless of voltage class.
+
+**Expected:** 66kV substation should use different curve than 500kV substation.
+
+**Solution:** 
+1. Pass asset `spec_overrides` to fragility computation
+2. Filter curves by matching conditions to asset attributes
+3. Select best-fit curve based on priority
+
+### 3. Wind Turbine Fragility Curve Orphans
+
+**Issue:** 17 fragility curves reference old standalone Wind Turbine UUIDs:
+- `component_uuid: "2ede9233-613a-5b..."` (old Blades UUID)
+- `component_uuid: "fd815621-d5ac-55..."` (old Tower UUID)
+
+New Wind Farm structure has different UUIDs for these components.
+
+**Solution:** Remap curves to new UUIDs after deleting old Wind Turbine.
+
+---
+
+## Design Principles
+
+### 1. Separation of Concerns
+- Functional knowledge (HBOM) independent of failure models (fragility)
+- Failure models independent of real-world assets
+- All layers linked via semantic component_type field
+
+### 2. Canonical Single Source
+- One functional decomposition per component type
+- Reused across all contexts (Coal Plant Transformer, Gas Plant Transformer use same decomposition)
+- Context-specific differences handled via asset attributes and fragility conditions
+
+### 3. Condition-Based Selection
+- Asset attributes (voltage, capacity) determine which fragility curves apply
+- Operating conditions (parked vs operating) filter available curves
+- Runtime selection based on user input or asset metadata
+
+### 4. Extensibility
+- New component types: add decomposition → auto-included via canonical registry
+- New fragility curves: add to research Excel → auto-matched via UUID
+- New sectors: no code changes required (canonical query includes all linked components)
+
+### 5. Alias Resolution
+- component_type serves as semantic link (human-readable, meaningful)
+- Aliases handle naming variations across data sources
+- No requirement to standardize external data
+
+### 6. Deterministic UUIDs
+- Canonical UUIDs: stable across system rebuilds (name-based)
+- HBOM UUIDs: stable across reprocessing (path-based)
+- Enables reproducible analysis and version control
+
+---
+
+## Maintenance Workflows
+
+### Adding a New Component Type
+
+**Prerequisites:** 
+- Functional decomposition knowledge (how component breaks down)
+- Real-world asset data (component exists in infrastructure)
+
+**Steps:**
+1. Create Excel decomposition file with hierarchical structure
+2. Place in `backend/hbom/decomposition_files/`
+3. Run: `python generate_hbom_baseline.py` → creates JSON
+4. Run: `python load_hbom_to_mongo.py` → loads to MongoDB
+5. Run: `python build_canonical_registry.py` → creates canonical entry
+6. Run: `python link_baseline_to_canonical.py` → links nodes
+
+**Verification:**
+```bash
+python query_asset_hbom.py "New Component Name"
+```
+
+### Adding Fragility Curves
+
+**Prerequisites:**
+- Research data with fragility parameters
+- Matching HBOM component exists in hbom_baseline
+
+**Steps:**
+1. Add curves to `backend/fragility_data/research/Fragility_Curve_Compilation.xlsx`
+2. Specify: component name, hazard, distribution type, parameters, conditions
+3. Run: `python fragility_research_processor.py Fragility_Curve_Compilation.xlsx fragility_database.json`
+4. Review matching statistics in output (matched vs. unmatched)
+5. Run: `python load_fragility_database.py`
+
+**Automatic Matching:** Processor uses fuzzy matching to link curves to HBOM component UUIDs.
+
+### Handling Name Mismatches
+
+**Detection:**
+```bash
+python find_name_mismatches.py
+```
+
+**Resolution:**
+1. Review suggested aliases in output
+2. Update `ALIAS_MAP` in `build_canonical_registry.py`
+3. Rerun: `python build_canonical_registry.py`
+4. Frontend automatically resolves on next data load
+
+**Example:**
+```python
+ALIAS_MAP = {
+    "Hydroelectric Power Generation Facility": [
+        "Hydroelectric Facility",
+        "Hydro Plant", 
+        "Hydroelectric Pump Storage Facility"
+    ]
+}
+```
+
+### Updating Canonical Links
+
+When hbom_baseline is modified (new decompositions added, old ones removed):
+
+```bash
+python build_canonical_registry.py     # Rebuild registry from current state
+python link_baseline_to_canonical.py   # Update all node linkages
+```
+
+Both scripts are idempotent and safe to run repeatedly.
+
+---
+
+## API Endpoints
+
+### HBOM Endpoints
+
+**Get HBOM Tree with Fragility:**
+```
+GET /api/fragility/compute/{sector}/{hazard}
+```
+
+Returns complete HBOM trees for sector with computed fragility curves and aliases.
+
+**Get HBOM Tree (no computation):**
+```
+GET /api/hbom/tree/{sector}/{hazard}
+```
+
+Returns HBOM structure with embedded fragility metadata (no computation).
+
+**Get Component by UUID:**
+```
+GET /api/hbom/component/{uuid}
+```
+
+Returns single component subtree.
+
+**Get Sector Statistics:**
+```
+GET /api/hbom/stats?sector=Energy Grid
+```
+
+Returns component counts, asset type distribution, fragility coverage.
+
+### Infrastructure Endpoints
+
+**Get Infrastructure Assets:**
+```
+POST /api/get-infrastructure
+Body: { sector, min_lat, max_lat, min_lon, max_lon }
+```
+
+Returns asset instances within bounding box.
+
+### Climate Endpoints
+
+**Get Climate Data:**
+```
+POST /api/get-climate
+Body: { hazard, scenario, lat, lon, num_cells, ... }
+```
+
+Returns climate projections for hazard analysis.
+
+---
+
+## Technical Debt and Future Work
+
+### Immediate
+
+1. **Delete Old Wind Turbine:** 37 orphaned nodes remain in hbom_baseline
+2. **Remap Wind Turbine Fragility Curves:** 17 curves reference old UUIDs
+3. **Remove Hardcoded Filters:** Some legacy files still have asset_type lists
+
+### Short-Term
+
+1. **Multi-Curve Storage:** Store all curve variants with conditions
+2. **Condition Selection UI:** Dropdown controls for blade states, voltage classes
+3. **Asset Attribute Filtering:** Use spec_overrides to select appropriate curves
+4. **Expand Fragility Coverage:** Add curves for components beyond Substation
+
+### Long-Term
+
+1. **Dynamic Sector Support:** Auto-discover sectors from canonical registry
+2. **Dependency Modeling:** Track cross-sector dependencies (power → water)
+3. **Versioning:** Track HBOM and fragility curve versions over time
+4. **Validation Framework:** Automated testing of canonical links and curve matching
+
+---
+
+## References
+
+**Functional-Form Methodology:**
+Stone, R. & Wood, K. L. (2000). "Development of a functional basis for design." Journal of Mechanical Design, 122, 359-370.
+
+**Fragility Curve Theory:**
+See ACCLIMATE technical documentation Section 7: Fragility Curves
+
+**NA-CORDEX Climate Data:**
+See ACCLIMATE technical documentation Section 5: Climate Data

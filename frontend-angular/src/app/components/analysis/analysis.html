@@ -1,0 +1,159 @@
+<h1>Damage Prediction Results</h1>
+
+<!-- SCENARIO INFO  -->
+<div class="div-container">
+  <h2>Scenario</h2>
+  <p><span class="result-header">Hazard:</span> {{ analysis().scenario?.hazard }}</p>
+  <p><span class="result-header">Scenario:</span> {{ analysis().scenario?.scenario }}</p>
+  <p>
+    <span class="result-header">Historical Years:</span> {{ analysis().scenario?.historicalYears }}
+  </p>
+  <p>
+    <span class="result-header">Projected Years:</span> {{ analysis().scenario?.projectedYears }}
+  </p>
+  <p>
+    <span class="result-header">Aggregate Climate Models:</span>
+    {{ analysis().scenario?.aggregate }}
+  </p>
+  <p><span class="result-header">Scenario:</span> {{ analysis().scenario?.aggregationMethod }}</p>
+</div>
+
+<!-- DEMOGRAPHICS  -->
+@if (analysis().assetAnalysis?.demographics) {
+<div class="div-container">
+  <h2>Population Affected</h2>
+  <p>
+    <span class="result-header">Population:</span>
+    {{ analysis().assetAnalysis?.demographics?.population }}
+  </p>
+  <p>
+    <span class="result-header">Households:</span>
+    {{ analysis().assetAnalysis?.demographics?.households }}
+  </p>
+  <p>
+    <span class="result-header">Median Household Income:</span>
+    {{ analysis().assetAnalysis?.demographics?.medianHHI }}
+  </p>
+  <p>
+    <span class="result-header">Per Capita Income:</span>
+    {{ analysis().assetAnalysis?.demographics?.perCapitaIncome }}
+  </p>
+</div>
+}
+
+<!-- INFRASTRUCTURE LEGEND  -->
+@if (analysis().infrastructure?.count) {
+<div class="div-container">
+  <h2>Infrastructure Data</h2>
+  @for (type of analysis().infrastructure?.metadata?.componentTypes; track type.assetName) {
+  <div class="infra-types flex-list">
+    <div class="flex-list">
+      <div
+        class="color"
+        [style.backgroundColor]="this.analysis().infrastructure?.colorMapping[type.assetName]"
+      ></div>
+      <p>{{ type.assetName }}</p>
+    </div>
+
+    <div class="flex-list">
+      <p>{{ type.count }}</p>
+
+      <button
+        matIconButton
+        matTooltip="View HBOM components for this type of infrastructure"
+        aria-label="View HBOM components for this type of infrastructure"
+        [disabled]="!type.hbom"
+        (click)="showTypeHBOM(type.assetName)"
+      >
+        <mat-icon>widgets</mat-icon>
+      </button>
+    </div>
+  </div>
+  }
+</div>
+}
+
+<!-- GRAPHS  -->
+@if (analysis().assetAnalysis?.variables?.selectedVariable) {
+<div>
+  <h2>Raw Climate Data</h2>
+  <mat-button-toggle-group
+    name="variablesToggle"
+    aria-label="Variable that is showing data"
+    [value]="analysis().assetAnalysis?.variables?.selectedVariable"
+  >
+    @for (item of analysis().assetAnalysis?.variables?.variablesList; track item) {
+    <mat-button-toggle [value]="item" (change)="updateSelectedVariable(item)">{{
+      analysis().assetAnalysis?.variables?.variableNameMapping[item]
+    }}</mat-button-toggle>
+    }
+  </mat-button-toggle-group>
+
+  <p>Selected Timeline Date: {{ currentTime() }}</p>
+  <mat-slider
+    class="slider"
+    min="0"
+    [max]="this.analysis().assetAnalysis?.times.length - 1"
+    #slider1
+  >
+    <input matSliderThumb [value]="currentTimeIndex()" (input)="updateTimeIndex($event)" />
+  </mat-slider>
+
+  <div id="plotlyChart"></div>
+
+  <h2>Climate Trend Analysis</h2>
+  <div id="analysis-plot"></div>
+  <div id="histogram-plot"></div>
+</div>
+}
+
+<!-- ECONOMIC METRICS - Needs rework  -->
+<!-- @if (analysis().assetAnalysis?.economicMetrics) {
+<div class="div-container">
+  <h2>Economic Metrics</h2>
+  <div>
+    <p>Metric 1</p>
+    <p>Some description of the metric here</p>
+  </div>
+</div>
+} -->
+
+<!-- SELECTED ASSET DETAILS  -->
+@if (selectedAsset()) {
+<div class="div-container">
+  <h2>Selected Asset</h2>
+  <p><span class="result-header">Name:</span> {{ selectedAsset().name }}</p>
+  <p><span class="result-header">Type:</span> {{ selectedAsset().facilityTypeName }}</p>
+</div>
+}
+
+<!-- HBOM COMPONENT GRAPHS  -->
+@if (selectedAsset() || analysis().componentAnalysis?.hbomAssetType) {
+<div>
+  <h2>Components</h2>
+  <p>Selected Timeline Date: {{ currentTime() }}</p>
+  <mat-slider
+    class="slider"
+    min="0"
+    [max]="this.analysis().assetAnalysis?.times.length - 1"
+    #slider2
+  >
+    <input matSliderThumb [value]="currentTimeIndex()" (input)="updateTimeIndex($event)" />
+  </mat-slider>
+  <div id="sunburst-plot" style="min-height: 650px"></div>
+
+  @if (fragilityItemClicked()) {
+  <!-- (1) Inline PoF time series (already wired) -->
+  <div id="fragility-inline-plot" style="min-height: 320px"></div>
+
+  <h4>Fragility Curve</h4>
+  <div id="fragility-static-curve" style="min-height: 320px"></div>
+
+  <h4>Model and Parameters</h4>
+  <p><span class="result-header">Model:</span> {{ fragilityData?.model }}</p>
+  <p><span class="result-header">Parameters:</span></p>
+  @for (param of fragilityData?.modelParams | keyvalue; track param) {
+  <p>{{ param.key }} - {{ formatParam(param.value) }}</p>
+  } }
+</div>
+}

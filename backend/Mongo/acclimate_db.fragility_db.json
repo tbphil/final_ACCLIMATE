@@ -1,0 +1,2106 @@
+[{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdaf"
+  },
+  "uuid": "282b942e-1f9e-5517-9e1c-b3bb6660cfe5",
+  "component_name": "Substation",
+  "component_name_cleaned": "Substation",
+  "component_uuid": "f8374851-ef5d-5ce5-8bb0-c9be609eb363",
+  "applies_to_level": "component",
+  "match_method": "exact",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "terrain_type": "type_1",
+    "severity_level": "moderate"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.921,
+    "sigma": 0.148
+  },
+  "priority": 30,
+  "is_best_fit": false,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "Ouyang, M., & Duenas-Osorio, L. (2014). Multi-dimensional hurricane resilience assessment of electric power systems. Structural Safety, 48, 15-24.",
+    "sheet": "Wind",
+    "row": 2,
+    "extracted_date": "2025-10-02T15:40:17.140737"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.840084",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb0"
+  },
+  "uuid": "859f9057-9fd9-52b5-8c67-58e6f4dad4f8",
+  "component_name": "Solar Panels",
+  "component_name_cleaned": "Solar Panels",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.060443010546419,
+    "sigma": 0.3
+  },
+  "priority": 10,
+  "is_best_fit": false,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "L Ceferino, N Lin, D Xi. 2021. “Stochastic Modeling of Solar Generation During Hurricanes.” PREPRINT (Version 1) available at Research Square https://doi.org/10.21203/rs.3.rs-797974/v1  ",
+    "sheet": "Wind",
+    "row": 19,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.842085",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb1"
+  },
+  "uuid": "96548bd0-6cc5-533f-a8bf-941731389e95",
+  "component_name": "Transmission Towers (Greece)",
+  "component_name_cleaned": "Transmission Towers (Greece)",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.628,
+    "sigma": 0.1158
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "D V Bilionis,  D Vamvatsikos. 2019. “Wind performance assessment of telecommunication towers: A case study in Greece.” Eccomas Proceedia COMPDYN (2019) 5741-5755. DOI: https://oa.mg/work/10.7712/120119.7342.19629",
+    "sheet": "Wind",
+    "row": 20,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.843088",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb2"
+  },
+  "uuid": "cf6d51e8-a392-58bb-b8fa-278e6d17d2b8",
+  "component_name": "Coal Power Plant",
+  "component_name_cleaned": "Coal Power Plant",
+  "component_uuid": "3c50ab26-dac5-5da6-a9d5-25f2e808daa0",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (mph)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 5.058,
+    "sigma": 0.122
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "mph",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "E B Watson, A H Etemadi. 2020. \"Modeling Electrical Grid Resilience Under Hurricane Wind Conditions With Increased Solar and Wind Power Generation.\" IEEE Transactions on Power Systems 352(2020) pp. 929-937. https://doi.org/10.1109/TPWRS.2019.2942279 ",
+    "sheet": "Wind",
+    "row": 21,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.844088",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb3"
+  },
+  "uuid": "39119208-0dda-580a-bdfb-f104e9eb3747",
+  "component_name": "Gas Power Plant",
+  "component_name_cleaned": "Gas Power Plant",
+  "component_uuid": "4b306415-70d7-5700-b5d5-f3d522a027c4",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (mph)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 5.205,
+    "sigma": 0.089
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "mph",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 22,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.844088",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb4"
+  },
+  "uuid": "c6eaa8d7-fa19-597c-9b0f-83889fcfefe9",
+  "component_name": "Solar Power Plant",
+  "component_name_cleaned": "Solar Power Plant",
+  "component_uuid": "9958e1d9-83a9-5be4-84db-26abee2e83fd",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (mph)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 5.102,
+    "sigma": 0.136
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "mph",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 23,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.845089",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb5"
+  },
+  "uuid": "b5a5a38d-0a1f-5b67-978b-1fe0c671623e",
+  "component_name": "Wind Power Plant",
+  "component_name_cleaned": "Wind Power Plant",
+  "component_uuid": "98b89e84-de31-548a-845e-177aff3b637d",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (mph)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 5.073,
+    "sigma": 0.124
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "mph",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 24,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.846086",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb6"
+  },
+  "uuid": "a10621cd-8c27-560e-bcd7-58a095a4a282",
+  "component_name": "Nuclear Power Plant",
+  "component_name_cleaned": "Nuclear Power Plant",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (mph)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 6.056,
+    "sigma": 0.217
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "mph",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 25,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb7"
+  },
+  "uuid": "0f1d2265-10c4-5d46-8ac9-ea5d455f0486",
+  "component_name": "New Wood Utility Pole",
+  "component_name_cleaned": "New Wood Utility Pole",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.0603,
+    "sigma": 0.114
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "https://www.tandfonline.com/doi/full/10.1080/15732479.2015.1053949#d1e662",
+    "sheet": "Wind",
+    "row": 28,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb8"
+  },
+  "uuid": "48b8fe7b-2676-590d-8101-5d546bfd7e12",
+  "component_name": "New Steel Utility Pole",
+  "component_name_cleaned": "New Steel Utility Pole",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.064,
+    "sigma": 0.126
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 29,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdb9"
+  },
+  "uuid": "761870c3-0616-5dd2-a370-db8d64b7e453",
+  "component_name": "Wood Pole 40 Years",
+  "component_name_cleaned": "Wood Pole 40 Years",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.024,
+    "sigma": 0.146
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 30,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdba"
+  },
+  "uuid": "61324a4e-bd97-58eb-b960-468340bef736",
+  "component_name": "Steel Pole 40 Years",
+  "component_name_cleaned": "Steel Pole 40 Years",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.91,
+    "sigma": 0.13
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 31,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdbb"
+  },
+  "uuid": "f5697318-5cdb-5d52-95e6-491f9e2a1434",
+  "component_name": "Wood Pole 60 Years",
+  "component_name_cleaned": "Wood Pole 60 Years",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.93,
+    "sigma": 0.2023
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 32,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdbc"
+  },
+  "uuid": "26b2ba60-f621-539f-b038-79c63202543a",
+  "component_name": "Steel Pole 60 Years",
+  "component_name_cleaned": "Steel Pole 60 Years",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind Gust Speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.892,
+    "sigma": 0.129
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 33,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdbd"
+  },
+  "uuid": "2d596f27-79d3-517c-a4cf-2f7701c89eb7",
+  "component_name": "Transmission Tower #1",
+  "component_name_cleaned": "Transmission Tower #1",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Maximum Sustained Wind Speed (m/s)",
+  "climate_variable": "Maximum Sustained Wind Speed (m/s)",
+  "conditions": {
+    "unknown_0": "Wind speed angle = 0"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.916,
+    "sigma": 0.0416
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "https://www.sciencedirect.com/science/article/pii/S0141029621007367",
+    "sheet": "Wind",
+    "row": 34,
+    "extracted_date": "2025-10-02T15:40:17.141736"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.846086",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdbe"
+  },
+  "uuid": "e4848967-bd21-5118-9f4b-5cc6c3181b96",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Transmission Tower #1",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Maximum Sustained Wind Speed (m/s)",
+  "climate_variable": "Maximum Sustained Wind Speed (m/s)",
+  "conditions": {
+    "unknown_0": "Wind speed angle = 30"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.873,
+    "sigma": 0.0446
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 35,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.847592",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdbf"
+  },
+  "uuid": "c8d48077-1516-56b9-a8af-2d2ab2cf88f6",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Transmission Tower #1",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Maximum Sustained Wind Speed (m/s)",
+  "climate_variable": "Maximum Sustained Wind Speed (m/s)",
+  "conditions": {
+    "unknown_0": "Wind speed angle = 60"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.961,
+    "sigma": 0.0509
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 36,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.847592",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc0"
+  },
+  "uuid": "f8a8e07b-38e1-5027-ac72-78e4477bbc43",
+  "component_name": "Transmission Tower #2",
+  "component_name_cleaned": "Transmission Tower #2",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Maximum Sustained Wind Speed (m/s)",
+  "climate_variable": "Maximum Sustained Wind Speed (m/s)",
+  "conditions": {
+    "unknown_0": "Wind speed angle = 0"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.734,
+    "sigma": 0.0546
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 37,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc1"
+  },
+  "uuid": "e047f8e5-e223-581a-9c03-2d71e3d3848c",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Transmission Tower #2",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Maximum Sustained Wind Speed (m/s)",
+  "climate_variable": "Maximum Sustained Wind Speed (m/s)",
+  "conditions": {
+    "unknown_0": "Wind speed angle = 30"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.789,
+    "sigma": 0.0592
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 38,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc2"
+  },
+  "uuid": "aa1d6a72-0d31-53ea-945f-c0fdec4037e7",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Transmission Tower #2",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Maximum Sustained Wind Speed (m/s)",
+  "climate_variable": "Maximum Sustained Wind Speed (m/s)",
+  "conditions": {
+    "unknown_0": "Wind speed angle = 60"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.997,
+    "sigma": 0.0474
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 39,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc3"
+  },
+  "uuid": "90083bc7-fda0-5609-b8b3-6e5aa7a6bdfd",
+  "component_name": "Steel Tower",
+  "component_name_cleaned": "Steel Tower",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s) (at top)",
+  "climate_variable": "Wind speed (m/s) (at top)",
+  "conditions": {
+    "unknown_0": "Ice Thickness = 0mm"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.628,
+    "sigma": 0.1158
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "at top",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "Bilionis, D.V. and D. Vamvatsikos. 2019. Wind performance assessment of telecommunication towers: a case study in Greece. Proceedings of 7th interactional conference on computational methods in structural dynamics and earthquake engineering, COMPDYN 2019. pp. 5741-5755. https://files.eccomasproceedia.org/papers/compdyn-2019/19629.pdf?mtime=20191122132148",
+    "sheet": "Wind",
+    "row": 40,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.848382",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc4"
+  },
+  "uuid": "d2090660-0042-54f1-92a0-b0086639790e",
+  "component_name": "Wind Turbine Blade 1 in Parked Condition",
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.524 m",
+    "operating_state": "parked"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.0343,
+    "sigma": 0.118
+  },
+  "priority": 80,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 48,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.849388",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc5"
+  },
+  "uuid": "de095347-2a01-57cf-89d9-622b28354fc2",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.629 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.2248,
+    "sigma": 0.119
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 49,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.850386",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc6"
+  },
+  "uuid": "5e5e579a-208f-5a2d-b3ce-8296ae42f951",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.839 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.365,
+    "sigma": 0.122
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 50,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.850386",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc7"
+  },
+  "uuid": "fbf045e8-aaf8-5a85-86b1-b92014e38788",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 1.049 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.6007,
+    "sigma": 0.185
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 51,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.851386",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc8"
+  },
+  "uuid": "2600c9f7-268c-5483-b8a7-f62c87058026",
+  "component_name": "Wind Turbine Blade 2 in Parked Condition",
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.524 m",
+    "operating_state": "parked"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 2.982,
+    "sigma": 0.088
+  },
+  "priority": 80,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 52,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdc9"
+  },
+  "uuid": "5ef446a1-9ad0-50f1-aac0-0ccdca0b3314",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.629 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.815,
+    "sigma": 0.522
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 53,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdca"
+  },
+  "uuid": "f0373167-ce43-5984-b669-4687a78478a5",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.839 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.3176,
+    "sigma": 0.1083
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 54,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdcb"
+  },
+  "uuid": "49ba5169-1524-5ed6-b573-1a291efd0245",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 1.049 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.6007,
+    "sigma": 0.185
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 55,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdcc"
+  },
+  "uuid": "261a0d57-9f61-5eb8-b7b3-f515a0454c73",
+  "component_name": "Wind Turbine Tower in Operating Condition",
+  "component_name_cleaned": "Wind Turbine Tower",
+  "component_uuid": "fd815621-d5ac-551c-b20f-5ee6c5582454",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.524 m",
+    "operating_state": "operating"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 2.853,
+    "sigma": 0.246
+  },
+  "priority": 80,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 56,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.852388",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdcd"
+  },
+  "uuid": "e6b63ad2-6a69-5d5a-aa1a-71e2b764552a",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Tower",
+  "component_uuid": "fd815621-d5ac-551c-b20f-5ee6c5582454",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.629 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.105,
+    "sigma": 0.248
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 57,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.853387",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdce"
+  },
+  "uuid": "a54ea18a-39fc-5a7c-b33b-d1c19a9b7e9b",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Tower",
+  "component_uuid": "fd815621-d5ac-551c-b20f-5ee6c5582454",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.839 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.497,
+    "sigma": 0.247
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 58,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.853387",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdcf"
+  },
+  "uuid": "3e9fb964-7c87-5cf5-8b77-f961e2ba3f99",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Tower",
+  "component_uuid": "fd815621-d5ac-551c-b20f-5ee6c5582454",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 1.049 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 23.615,
+    "sigma": 7.622
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 59,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.854386",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd0"
+  },
+  "uuid": "d93b9bf0-4035-5084-a6ff-34e6613cf867",
+  "component_name": "Wind Turbine Blade 1 in Operating Condition",
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.524 m",
+    "operating_state": "operating"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 1.999,
+    "sigma": 0.436
+  },
+  "priority": 80,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 60,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.855534",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd1"
+  },
+  "uuid": "de095347-2a01-57cf-89d9-622b28354fc2",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.629 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 2.8717,
+    "sigma": 0.445
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 61,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd2"
+  },
+  "uuid": "5e5e579a-208f-5a2d-b3ce-8296ae42f951",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.839 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.487,
+    "sigma": 0.435
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 62,
+    "extracted_date": "2025-10-02T15:40:17.142753"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd3"
+  },
+  "uuid": "fbf045e8-aaf8-5a85-86b1-b92014e38788",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 1",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 1.049 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.006,
+    "sigma": 0.455
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 63,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd4"
+  },
+  "uuid": "d0078c50-5735-5d44-93d7-352b0f869d8a",
+  "component_name": "Wind Turbine Blade 2 in Operating Condition",
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.524 m",
+    "operating_state": "operating"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 1.763,
+    "sigma": 0.457
+  },
+  "priority": 80,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 64,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd5"
+  },
+  "uuid": "5ef446a1-9ad0-50f1-aac0-0ccdca0b3314",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.629 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 2.782,
+    "sigma": 0.451
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 65,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd6"
+  },
+  "uuid": "f0373167-ce43-5984-b669-4687a78478a5",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.839 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.517,
+    "sigma": 0.469
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 66,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd7"
+  },
+  "uuid": "49ba5169-1524-5ed6-b573-1a291efd0245",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 2",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 1.049 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.285,
+    "sigma": 0.567
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 67,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd8"
+  },
+  "uuid": "0aeec6f0-e3a2-59df-aa68-b68d2b918574",
+  "component_name": "Wind Turbine Blade 3 in Operating Condition",
+  "component_name_cleaned": "Wind Turbine Blade 3",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.524 m",
+    "operating_state": "operating"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 1.701,
+    "sigma": 0.51
+  },
+  "priority": 80,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 68,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdd9"
+  },
+  "uuid": "56a29b82-7f21-5560-a8f4-0bfceaba2024",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 3",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.629 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 2.795,
+    "sigma": 0.499
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 69,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdda"
+  },
+  "uuid": "d0f68446-e436-5915-a9ae-2bd44ec346e6",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 3",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 0.839 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.579,
+    "sigma": 0.517
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 70,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bddb"
+  },
+  "uuid": "87ea05c8-6f23-5669-bd7c-c72810e0b815",
+  "component_name": {
+    "$numberDouble": "NaN"
+  },
+  "component_name_cleaned": "Wind Turbine Blade 3",
+  "component_uuid": "2ede9233-613a-5b43-b47c-8813c0567000",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Wind",
+  "hazard_variable": "Wind speed (m/s)",
+  "climate_variable": "sfcWind",
+  "conditions": {
+    "unknown_0": "Critical Displacement = 1.049 m"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.791,
+    "sigma": 0.821
+  },
+  "priority": 70,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m/s",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Wind",
+    "row": 71,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bddc"
+  },
+  "uuid": "03278770-7492-5057-ad42-01e130c30205",
+  "component_name": "Transmission Tower ",
+  "component_name_cleaned": "Transmission Tower",
+  "component_uuid": null,
+  "applies_to_level": "archetype",
+  "match_method": "archetype",
+  "hazard": "Snow",
+  "hazard_variable": "Ice Thickness (mm)",
+  "climate_variable": "ice_thickness",
+  "conditions": {
+    "load_condition": "uniform_balance",
+    "wind_condition": "no_wind"
+  },
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.223,
+    "sigma": 0.0376
+  },
+  "priority": 80,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "mm",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "https://open.library.ubc.ca/soa/cIRcle/collections/53032/items/1.0076203",
+    "sheet": "Snow",
+    "row": 2,
+    "extracted_date": "2025-10-02T15:40:17.143751"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.855534",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bddd"
+  },
+  "uuid": "1351c7a4-72bf-5ec8-9aec-ef9bbb547d22",
+  "component_name": "Cables: Thermoplastic Insulation",
+  "component_name_cleaned": "Cable (Thermoplastic)",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Heat",
+  "hazard_variable": "Temperature (degC)",
+  "climate_variable": "tas",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 5.52,
+    "sigma": 0.117
+  },
+  "priority": 10,
+  "is_best_fit": false,
+  "units": {
+    "intensity": "degC",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "https://link.springer.com/article/10.1007/s10694-016-0616-0#Tab3",
+    "sheet": "Heat",
+    "row": 2,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.856545",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bdde"
+  },
+  "uuid": "80993f57-b669-5588-9543-436f155944f1",
+  "component_name": "Cables: Thermoset Insulation",
+  "component_name_cleaned": "Cable (Thermoset)",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Heat",
+  "hazard_variable": "Temperature (degC)",
+  "climate_variable": "tas",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 6.04,
+    "sigma": 0.0516
+  },
+  "priority": 10,
+  "is_best_fit": false,
+  "units": {
+    "intensity": "degC",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Heat",
+    "row": 3,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bddf"
+  },
+  "uuid": "bede3269-0395-5f02-9aea-630609729094",
+  "component_name": "Cables: Kerite-FR",
+  "component_name_cleaned": "Cables: Kerite-FR",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Heat",
+  "hazard_variable": "Temperature (degC)",
+  "climate_variable": "tas",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 5.93,
+    "sigma": 0.141
+  },
+  "priority": 10,
+  "is_best_fit": false,
+  "units": {
+    "intensity": "degC",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Heat",
+    "row": 4,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bde0"
+  },
+  "uuid": "df4f2d4b-48b3-5758-aa11-5f4becca5d00",
+  "component_name": "Photovoltaic Modules (for PV systems)",
+  "component_name_cleaned": "Photovoltaic Modules (for PV systems)",
+  "component_uuid": "f4b7670e-75ce-5ed9-b9d4-8f8a958fd8b2",
+  "applies_to_level": "component",
+  "match_method": "exact",
+  "hazard": "Flood",
+  "hazard_variable": "Depth of flood (ft)",
+  "climate_variable": "flood_depth",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 3.1098,
+    "sigma": 1.3335
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "ft",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "B Chen. 2020. “Optimization framework for solar energy integrated resilient distribution grid.” Argonne National Laboratory CPS#34228- Final Project Review. http://wzy.ece.iastate.edu/project/34228_FPRANL_v0.4.pdf  ",
+    "sheet": "Flood",
+    "row": 2,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.858545",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bde1"
+  },
+  "uuid": "f01ec142-0821-5f92-a2cb-b25429294279",
+  "component_name": "Substation",
+  "component_name_cleaned": "Substation",
+  "component_uuid": "f8374851-ef5d-5ce5-8bb0-c9be609eb363",
+  "applies_to_level": "component",
+  "match_method": "exact",
+  "hazard": "Flood",
+  "hazard_variable": "Depth of flood (ft)",
+  "climate_variable": "flood_depth",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.6245,
+    "sigma": 2.1871
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "ft",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Flood",
+    "row": 3,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.858545",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bde2"
+  },
+  "uuid": "c961e795-42b8-55ad-9968-90a4b2671bb7",
+  "component_name": "Pole",
+  "component_name_cleaned": "Pole",
+  "component_uuid": null,
+  "applies_to_level": "unknown",
+  "match_method": "no_match",
+  "hazard": "Flood",
+  "hazard_variable": "Depth of flood (ft)",
+  "climate_variable": "flood_depth",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 7.4385,
+    "sigma": 2.5546
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "ft",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Flood",
+    "row": 4,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1,
+  "loaded_at": "2025-10-07T12:18:19.859545",
+  "loaded_by": "load_script"
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bde3"
+  },
+  "uuid": "c2793d9e-300c-5a7d-a5f6-f4c21c38d1d6",
+  "component_name": "High Voltage Substation",
+  "component_name_cleaned": "High Voltage Substation",
+  "component_uuid": "f8374851-ef5d-5ce5-8bb0-c9be609eb363",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Flood",
+  "hazard_variable": "Depth of flood (m)",
+  "climate_variable": "flood_depth",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 0.3572,
+    "sigma": 0.4759
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": "D Sánchez-Muñoz,  J L Domínguez-García , E Martínez-Gomariz, B Russo, J Stevens, and M Pardo. 2020. \"Electrical Grid Risk Assessment Against Flooding in Barcelona and Bristol Cities\" Sustainability 12- 4(2020) 1527..  https://doi.org/10.3390/su12041527",
+    "sheet": "Flood",
+    "row": 5,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e551926fd0a94fce55bde4"
+  },
+  "uuid": "16c801a1-6344-5bae-85ac-b233333619ff",
+  "component_name": "Medium Voltage substation",
+  "component_name_cleaned": "Medium Voltage substation",
+  "component_uuid": "f8374851-ef5d-5ce5-8bb0-c9be609eb363",
+  "applies_to_level": "component",
+  "match_method": "normalized",
+  "hazard": "Flood",
+  "hazard_variable": "Depth of flood (m)",
+  "climate_variable": "flood_depth",
+  "conditions": {},
+  "model": "lognormal",
+  "parameters": {
+    "mu": 0.4197,
+    "sigma": 0.1745
+  },
+  "priority": 60,
+  "is_best_fit": true,
+  "units": {
+    "intensity": "m",
+    "probability": "0-1"
+  },
+  "provenance": {
+    "source": {
+      "$numberDouble": "NaN"
+    },
+    "sheet": "Flood",
+    "row": 6,
+    "extracted_date": "2025-10-02T15:40:17.144742"
+  },
+  "active": true,
+  "version": 1
+},
+{
+  "_id": {
+    "$oid": "68e57f5d99e744e96d21fdd3"
+  },
+  "uuid": "test-heat-substation",
+  "component_uuid": "f8374851-ef5d-5ce5-8bb0-c9be609eb363",
+  "hazard": "Heat Stress",
+  "climate_variable": "tas",
+  "model": "lognormal",
+  "parameters": {
+    "mu": 4.5,
+    "sigma": 0.3
+  },
+  "priority": 60,
+  "active": true
+}]

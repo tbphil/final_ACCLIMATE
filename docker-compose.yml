@@ -1,0 +1,31 @@
+# version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: acclimate
+    container_name: python_web_service
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+  frontend:
+    build:
+      context: ./frontend-angular
+      dockerfile: Dockerfile
+    image: acclimatefront
+    container_name: acclimate_front_end
+    ports:
+      - 4200:4200
+    develop:
+      watch:
+        - action: sync
+          path: /frontend-angular
+          target: /front
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: ./frontend-angular/package.json

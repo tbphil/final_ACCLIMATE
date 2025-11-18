@@ -1,0 +1,477 @@
+[{
+  "_id": {
+    "$oid": "6812672600f6c9bba3c8ca2e"
+  },
+  "sector": "Energy Grid",
+  "components": [
+    {
+      "label": "Substation",
+      "component_type": "substation",
+      "uuid": "09909e1a-2ed6-4573-9de5-ea1ea60a0f5a",
+      "hazards": {},
+      "subcomponents": [
+        {
+          "label": "Bay: Incoming Feeder",
+          "component_type": "bay_incoming_feeder",
+          "uuid": "409baee5-304e-4f72-998e-38a0c55d6855",
+          "hazards": {},
+          "subcomponents": [
+            {
+              "label": "Line Terminal",
+              "component_type": "line_terminal",
+              "uuid": "06a693ec-8c28-4d7d-a878-741969a62f3f",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 77.46,
+                    "shape": 2.18
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Surge Arrester",
+              "component_type": "surge_arrester",
+              "uuid": "2dc8d5d6-ef93-4abd-a573-a6cd274fbc31",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 82.11,
+                    "shape": 2.31
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Line Disconnector",
+              "component_type": "line_disconnector",
+              "uuid": "0a77ea7b-ee77-4896-961c-1348c934537b",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 69.82,
+                    "shape": 2.48
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Circuit Breaker",
+              "component_type": "circuit_breaker",
+              "uuid": "11bf6f0d-11c9-42ee-9498-727ea65fb625",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 89.82,
+                    "shape": 2.65
+                  }
+                }
+              },
+              "subcomponents": []
+            }
+          ]
+        },
+        {
+          "label": "Transformer Bay",
+          "component_type": "bay_transformer",
+          "uuid": "33333333-3333-3333-3333-333333333333",
+          "hazards": {},
+          "subcomponents": [
+            {
+              "label": "Capacity Voltage Transformer",
+              "component_type": "capacity_voltage_transformer",
+              "uuid": "998480fe-2708-4c57-8db2-7e137b80a4d0",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "lognormal",
+                  "fragility_params": {
+                    "median": 115.15,
+                    "dispersion": 0.86
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Current Transformer",
+              "component_type": "current_transformer",
+              "uuid": "82f97adf-76a9-4882-80be-eda1b5ae78fd",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "lognormal",
+                  "fragility_params": {
+                    "median": 116.51,
+                    "dispersion": 0.89
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Transformer",
+              "component_type": "transformer",
+              "uuid": "1d6143bc-87bd-48d3-b25e-372d02b5e0d4",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "lognormal",
+                  "fragility_params": {
+                    "median": 110.67,
+                    "dispersion": 0.9
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Circuit Breaker",
+              "component_type": "circuit_breaker",
+              "uuid": "d658b486-2a8e-4579-baa6-ec4ce6a660ff",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 71.73,
+                    "shape": 2.45
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Bus Disconnector",
+              "component_type": "bus_disconnector",
+              "uuid": "1b09306c-ad7e-450b-bf90-a15a883b8e76",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 79.22,
+                    "shape": 2.6
+                  }
+                }
+              },
+              "subcomponents": []
+            }
+          ]
+        },
+        {
+          "label": "Bay: Outgoing Feeder",
+          "component_type": "bay_outgoing_feeder",
+          "uuid": "c17f9257-6932-464c-b7b9-6c55264556a9",
+          "hazards": {},
+          "subcomponents": [
+            {
+              "label": "Line Terminal",
+              "component_type": "line_terminal",
+              "uuid": "37fe919c-8dec-4718-9d87-342644c1c40e",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 83.9,
+                    "shape": 2.36
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Bus Disconnector",
+              "component_type": "bus_disconnector",
+              "uuid": "1b09306c-ad7e-450b-bf90-a15a883b8e76",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 71.39,
+                    "shape": 2.31
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Circuit Breaker",
+              "component_type": "circuit_breaker",
+              "uuid": "d658b486-2a8e-4579-baa6-ec4ce6a660ff",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 75.26,
+                    "shape": 2.52
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Capacity Voltage Transformer",
+              "component_type": "capacity_voltage_transformer",
+              "uuid": "998480fe-2708-4c57-8db2-7e137b80a4d0",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "lognormal",
+                  "fragility_params": {
+                    "median": 115.99,
+                    "dispersion": 0.94
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Current Transformer",
+              "component_type": "current_transformer",
+              "uuid": "82f97adf-76a9-4882-80be-eda1b5ae78fd",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "lognormal",
+                  "fragility_params": {
+                    "median": 113.33,
+                    "dispersion": 0.84
+                  }
+                }
+              },
+              "subcomponents": []
+            }
+          ]
+        },
+        {
+          "label": "Bay: Reactive Systems",
+          "component_type": "reactive_systems",
+          "uuid": "506a4a26-6424-4cce-a71d-8db725b8c2d6",
+          "hazards": {},
+          "subcomponents": [
+            {
+              "label": "Inductor",
+              "component_type": "inductor",
+              "uuid": "ac3b339c-f913-41a4-8755-22f93d41db18",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 82.82,
+                    "shape": 2.45
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Wave Trap",
+              "component_type": "wave_trap",
+              "uuid": "d6775846-64a3-4ad5-b0e2-f06c9d1e4436",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 86.01,
+                    "shape": 2.63
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Circuit Switcher",
+              "component_type": "circuit_switcher",
+              "uuid": "0afd8a94-c219-4aeb-ac59-561f663c3248",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 90.84,
+                    "shape": 2.52
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Capacitor Bank",
+              "component_type": "capacitor_bank",
+              "uuid": "7c82d055-06ab-4893-8ede-4d917cfe8c45",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 77.17,
+                    "shape": 2.36
+                  }
+                }
+              },
+              "subcomponents": []
+            }
+          ]
+        },
+        {
+          "label": "Bay: Control & Protection Equipment",
+          "component_type": "control_protection_equipment",
+          "uuid": "9293c3c3-143e-4449-9af2-32eba77a1022",
+          "hazards": {},
+          "subcomponents": [
+            {
+              "label": "Auxiliary Standby Power System",
+              "component_type": "auxiliary_standby_power_system",
+              "uuid": "8cdbdcff-e032-491b-92be-0c6a8ec933c6",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 74.37,
+                    "shape": 2.28
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Communications System",
+              "component_type": "communications_system",
+              "uuid": "e95cf922-5cb7-4c53-97df-4f3c34d36a11",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 85.01,
+                    "shape": 2.14
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Control Cable",
+              "component_type": "control_cable",
+              "uuid": "b6628842-85c3-414e-8414-d3c945227ffb",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "logistic",
+                  "fragility_params": {
+                    "mid_point": 118.74,
+                    "slope": 0.83
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Lightning Arresters",
+              "component_type": "lightning_arresters",
+              "uuid": "9c713c41-4773-4f7e-a612-fe5b293fc6d6",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 76.8,
+                    "shape": 2.64
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Power Cable",
+              "component_type": "power_cable",
+              "uuid": "17a1c0e6-c731-4dfa-ba34-ba4aadad635c",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "logistic",
+                  "fragility_params": {
+                    "mid_point": 116.09,
+                    "slope": 0.78
+                  }
+                }
+              },
+              "subcomponents": []
+            },
+            {
+              "label": "Cooling Systems",
+              "component_type": "substation_cooling_system",
+              "uuid": "f4570d64-51a5-478b-930c-409dba11606c",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 95.77,
+                    "shape": 2.03
+                  }
+                }
+              },
+              "subcomponents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Line Tap",
+      "component_type": "line_tap",
+      "uuid": "77e14166-8f06-4da5-9297-9ddc4f67923d",
+      "hazards": {},
+      "subcomponents": []
+    },
+    {
+      "label": "Fossil Fuel Generation Plant",
+      "component_type": "fossil_fuel_generation_plant",
+      "uuid": "57dc97ef-9961-4608-9b3a-ed60b59add2f",
+      "hazards": {},
+      "subcomponents": [
+        {
+          "label": "Turbine",
+          "component_type": "generation_plant_turbine",
+          "uuid": "2ede9356-1d6d-4040-b401-5e3164beb9a8",
+          "hazards": {
+            "Heat Stress": {
+              "fragility_model": "weibull",
+              "fragility_params": {
+                "scale": 71.04,
+                "shape": 2.83
+              }
+            }
+          },
+          "subcomponents": []
+        }
+      ]
+    },
+    {
+      "label": "Natural Gas Generation Plant",
+      "component_type": "natural_gas_generation_plant",
+      "uuid": "40aca113-8d6e-47e1-8bb9-ed5015835093",
+      "hazards": {},
+      "subcomponents": [
+        {
+          "label": "Turbine",
+          "component_type": "generation_plant_turbine",
+          "uuid": "726defcd-0352-4ad0-b918-26875046e205",
+          "hazards": {},
+          "subcomponents": [
+            {
+              "label": "Rotar Assembly",
+              "component_type": "rotar_assembly",
+              "uuid": "cb46b06d-7b42-440b-95a7-1ee332c0f09c",
+              "hazards": {
+                "Heat Stress": {
+                  "fragility_model": "weibull",
+                  "fragility_params": {
+                    "scale": 86.6,
+                    "shape": 2.35
+                  }
+                }
+              },
+              "subcomponents": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}]

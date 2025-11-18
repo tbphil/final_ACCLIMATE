@@ -1,0 +1,78 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+@use './custom-theme/custom-theme_theme-colors.scss' as custom-theme;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: custom-theme.$primary-palette,
+        tertiary: custom-theme.$tertiary-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+// Ensures the actual INL colors are used instead of a different shade of these
+@include mat.theme-overrides(
+  (
+    primary: #07519e,
+    secondary: #2ba8e0,
+    tertiary: #8dc340,
+    error: #cf1e4c,
+    on-surface: #2e3036,
+  )
+);
+
+/* You can add global styles to this file, and also import other style files */
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* CSS Variables for Color Palette */
+:root {
+  /* Primary Colors */
+  --primary-blue: #07519e;
+  --success-green: #8dc340;
+  --light-blue: #2ba8e0;
+  --error-red: #cf1e4c;
+  --warning-orange: #f68c20;
+  --highlight-purple: #83236a;
+  --light-gray: #dcddde;
+
+  /* Additional Variables */
+  --form-bg-color: #ffffff;
+  --input-border-color: #ced4da;
+  --input-focus-border: var(--light-blue);
+  --label-color: #495057;
+  --text-color: #212529;
+  --button-bg-color: var(--primary-blue);
+  --button-hover-bg-color: var(--light-blue);
+  --error-color: var(--error-red);
+  --success-color: var(--success-green);
+  --spinner-border-color: var(--light-blue);
+  --spinner-bg-color: rgba(43, 168, 224, 0.2); /* Semi-transparent light blue */
+}
+
+/* Global Layout */
+body,
+html,
+#app {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh; /* Allow the layout to grow */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

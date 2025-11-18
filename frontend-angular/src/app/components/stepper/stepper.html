@@ -1,0 +1,142 @@
+<mat-stepper orientation="vertical" linear #stepper class="stepper">
+  <mat-step [stepControl]="scenarioForm">
+    <p>Set the scenario details below to do damage prediction analysis for infrastructure.</p>
+    <form [formGroup]="scenarioForm">
+      <ng-template matStepLabel>Set Scenario</ng-template>
+      <mat-form-field>
+        <mat-label>Hazard</mat-label>
+        <mat-select formControlName="hazard">
+          @for (hazard of hazards; track hazard.value) {
+          <mat-option [value]="hazard.value" (onSelectionChange)="getClimateModels()">{{
+            hazard.viewValue
+          }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Scenario</mat-label>
+        <mat-select formControlName="scenario">
+          @for (scenario of scenarios; track scenario.value) {
+          <mat-option [value]="scenario.value" (onSelectionChange)="getClimateModels()">{{
+            scenario.viewValue
+          }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Historical Years</mat-label>
+        <input matInput type="number" formControlName="historicalYears" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Projected Years</mat-label>
+        <input matInput type="number" formControlName="projectedYears" required />
+      </mat-form-field>
+
+      <mat-checkbox formControlName="aggregate" (change)="getClimateModels()"
+        >Aggregate Climate Models</mat-checkbox
+      >
+
+      <mat-form-field *ngIf="showAggregation === true">
+        <mat-label>Aggregation Method</mat-label>
+        <mat-select formControlName="aggregationMethod">
+          @for (method of aggregationMethods; track method.value) {
+          <mat-option [value]="method.value">{{ method.viewValue }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngIf="showAggregation === false">
+        <mat-label>Climate Model</mat-label>
+        <mat-select formControlName="climateModel">
+          @for (model of climateModels; track model) {
+          <mat-option [value]="model">{{ model }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <div>
+        <button matButton matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Select Assets</ng-template>
+    <p>
+      Use the map shape tool to select the geographical area where your infrastructure is located.
+      Or select a saved query (the saved query will replace your scenario settings as well).
+    </p>
+
+    <div *ngIf="savedQueries.length > 0">
+      <label>Saved Queries: </label>
+      <ul>
+        <li *ngFor="let query of savedQueries">
+          <button matButton matTooltip="Load query" (click)="loadQuery(query)">
+            {{ query.name }}
+          </button>
+          <button
+            mat-icon-button
+            matTooltip="Delete query"
+            (click)="deleteQuery(query)"
+            style="margin-left: 10px"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <span class="lasso">
+      <button
+        class="lasso-header"
+        [class.active]="squareEnabled"
+        mat-icon-button
+        [matTooltip]="squareEnabled ? 'Clear Area' : 'Select Area'"
+        (click)="squareMode()"
+      >
+        <mat-icon>crop_free</mat-icon>
+      </button>
+    </span>
+    <mat-form-field *ngIf="dataLoaded === true && squareEnabled === true">
+      <mat-label>Query Name</mat-label>
+      <input matInput type="text" [(ngModel)]="queryName" [ngModelOptions]="{ standalone: true }" />
+    </mat-form-field>
+    <button matButton *ngIf="dataLoaded === true && squareEnabled === true" (click)="saveQuery()">
+      Save Query
+    </button>
+    <div>
+      <button matButton matStepperPrevious>Back</button>
+      <button matButton matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Asset Analysis</ng-template>
+    <p>
+      Review the analysis results on the right to find the projected impacts to the infrastructure
+      assets.
+    </p>
+    <div>
+      <button matButton matStepperPrevious>Back</button>
+      <button matButton matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Component Analysis</ng-template>
+    <p>
+      Select an infrastructure asset (dot) on the map. If a Hardware Bill of Materials (HBOM) list
+      is available for this infrastructure type, a sunburst graph will appear on the right. If
+      fragility curve data exists for the infrastructure type or components, use the timeline slider
+      to see the predicted failure risk levels at different times based on weather data. You can
+      then click on the colored sections of the sunburst graph to view more information about
+      fragility curves for that component.
+    </p>
+    <div>
+      <button matButton matStepperPrevious>Back</button>
+    </div>
+  </mat-step>
+</mat-stepper>

@@ -1,0 +1,1175 @@
+{
+  "metadata": {
+    "created_date": "2025-10-08T14:02:59.635873",
+    "total_nodes": 82,
+    "source": "baseline_decomposition_files",
+    "note": "HBOM baseline from decomposition files"
+  },
+  "nodes": [
+    {
+      "uuid": "040f63cd-45f3-576a-a83f-6a770384048d",
+      "asset_type": "wind_farm",
+      "label": "Wind Farm",
+      "level": 1,
+      "node_path": "Wind Farm",
+      "parent_uuid": null,
+      "children_uuids": [
+        "87ca24e9-3464-5463-b2bd-4e8db51af061",
+        "d475646c-18aa-51c4-a9f7-3cda16959926",
+        "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+        "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.632867",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "87ca24e9-3464-5463-b2bd-4e8db51af061",
+      "asset_type": "wind_farm",
+      "label": "Transmission",
+      "level": 2,
+      "node_path": "Wind Farm > Transmission",
+      "parent_uuid": "040f63cd-45f3-576a-a83f-6a770384048d",
+      "children_uuids": [
+        "15d7f228-1ba8-54e3-88a4-c4180aa9ef01",
+        "f165ab0b-215f-5fb8-bddb-b37e1ccf56c8",
+        "7f225315-3334-5083-b121-1ad8a61cd4ed",
+        "dd0623a5-b317-534b-8cf2-3b6efb98f409",
+        "64dad031-fdd4-58d9-b9ea-64e40f2b0a36"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.632867",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "15d7f228-1ba8-54e3-88a4-c4180aa9ef01",
+      "asset_type": "wind_farm",
+      "label": "Bushings",
+      "level": 3,
+      "node_path": "Wind Farm > Transmission > Bushings",
+      "parent_uuid": "87ca24e9-3464-5463-b2bd-4e8db51af061",
+      "children_uuids": [
+        "82832c12-cada-5c0f-aec6-14d3b59bbd69",
+        "814eda86-baed-5ebf-ae6d-f628887e78be"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.632867",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "82832c12-cada-5c0f-aec6-14d3b59bbd69",
+      "asset_type": "wind_farm",
+      "label": "Body",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Bushings > Body",
+      "parent_uuid": "15d7f228-1ba8-54e3-88a4-c4180aa9ef01",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.632867",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "814eda86-baed-5ebf-ae6d-f628887e78be",
+      "asset_type": "wind_farm",
+      "label": "Insulation",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Bushings > Insulation",
+      "parent_uuid": "15d7f228-1ba8-54e3-88a4-c4180aa9ef01",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.632867",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "f165ab0b-215f-5fb8-bddb-b37e1ccf56c8",
+      "asset_type": "wind_farm",
+      "label": "Conductor (Power Line)",
+      "level": 3,
+      "node_path": "Wind Farm > Transmission > Conductor (Power Line)",
+      "parent_uuid": "87ca24e9-3464-5463-b2bd-4e8db51af061",
+      "children_uuids": [
+        "adc79a10-90dc-5b23-a206-40e6b60bb23c",
+        "53ee4dc4-0cff-5727-bb68-4ef58138c8e6"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.632867",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "adc79a10-90dc-5b23-a206-40e6b60bb23c",
+      "asset_type": "wind_farm",
+      "label": "Conductor",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Conductor (Power Line) > Conductor",
+      "parent_uuid": "f165ab0b-215f-5fb8-bddb-b37e1ccf56c8",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.632867",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "53ee4dc4-0cff-5727-bb68-4ef58138c8e6",
+      "asset_type": "wind_farm",
+      "label": "Ground Wire",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Conductor (Power Line) > Ground Wire",
+      "parent_uuid": "f165ab0b-215f-5fb8-bddb-b37e1ccf56c8",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "7f225315-3334-5083-b121-1ad8a61cd4ed",
+      "asset_type": "wind_farm",
+      "label": "Insulators",
+      "level": 3,
+      "node_path": "Wind Farm > Transmission > Insulators",
+      "parent_uuid": "87ca24e9-3464-5463-b2bd-4e8db51af061",
+      "children_uuids": [
+        "98c7f2de-904d-5998-89a6-bf6747b0225c",
+        "caab3435-b1a2-505d-b763-db60da8ff295",
+        "8a56e0f6-9076-59ba-af15-86e7278b8863",
+        "eb75de17-3344-5c59-9612-1fe31d73d01e"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "98c7f2de-904d-5998-89a6-bf6747b0225c",
+      "asset_type": "wind_farm",
+      "label": "Glass-reinforced Polymer",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Insulators > Glass-reinforced Polymer",
+      "parent_uuid": "7f225315-3334-5083-b121-1ad8a61cd4ed",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "caab3435-b1a2-505d-b763-db60da8ff295",
+      "asset_type": "wind_farm",
+      "label": "Polymer (Silicone Rubber Based)",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Insulators > Polymer (Silicone Rubber Based)",
+      "parent_uuid": "7f225315-3334-5083-b121-1ad8a61cd4ed",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "8a56e0f6-9076-59ba-af15-86e7278b8863",
+      "asset_type": "wind_farm",
+      "label": "Porcelain (Wet Process)",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Insulators > Porcelain (Wet Process)",
+      "parent_uuid": "7f225315-3334-5083-b121-1ad8a61cd4ed",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "eb75de17-3344-5c59-9612-1fe31d73d01e",
+      "asset_type": "wind_farm",
+      "label": "Semi-Conductive Glaze Finish",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Insulators > Semi-Conductive Glaze Finish",
+      "parent_uuid": "7f225315-3334-5083-b121-1ad8a61cd4ed",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "dd0623a5-b317-534b-8cf2-3b6efb98f409",
+      "asset_type": "wind_farm",
+      "label": "Power Pole",
+      "level": 3,
+      "node_path": "Wind Farm > Transmission > Power Pole",
+      "parent_uuid": "87ca24e9-3464-5463-b2bd-4e8db51af061",
+      "children_uuids": [
+        "97ac4e18-db62-54bd-ac35-1d49ea3f0c4c",
+        "2d017810-3c5d-53fb-aeb3-c05070f01b49"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "97ac4e18-db62-54bd-ac35-1d49ea3f0c4c",
+      "asset_type": "wind_farm",
+      "label": "Cross Arm",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Power Pole > Cross Arm",
+      "parent_uuid": "dd0623a5-b317-534b-8cf2-3b6efb98f409",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "2d017810-3c5d-53fb-aeb3-c05070f01b49",
+      "asset_type": "wind_farm",
+      "label": "Pylon",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Power Pole > Pylon",
+      "parent_uuid": "dd0623a5-b317-534b-8cf2-3b6efb98f409",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "64dad031-fdd4-58d9-b9ea-64e40f2b0a36",
+      "asset_type": "wind_farm",
+      "label": "Transmission Line Arrester",
+      "level": 3,
+      "node_path": "Wind Farm > Transmission > Transmission Line Arrester",
+      "parent_uuid": "87ca24e9-3464-5463-b2bd-4e8db51af061",
+      "children_uuids": [
+        "a7fb8bba-a329-5d47-a732-9f615f2b7d65",
+        "21f3e978-ceae-58d9-b436-6d924f907a4c",
+        "fa81e068-86e2-5664-9dd9-d597cb1b058f",
+        "ca74879b-79e6-52bb-80f2-6654fdf05fc6",
+        "c6f240e3-5dca-5f58-b703-845313236f5e",
+        "e9c07567-3eed-5433-b173-a16d77397314"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "a7fb8bba-a329-5d47-a732-9f615f2b7d65",
+      "asset_type": "wind_farm",
+      "label": "Arrester Body",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Transmission Line Arrester > Arrester Body",
+      "parent_uuid": "64dad031-fdd4-58d9-b9ea-64e40f2b0a36",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "21f3e978-ceae-58d9-b436-6d924f907a4c",
+      "asset_type": "wind_farm",
+      "label": "Disconnector",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Transmission Line Arrester > Disconnector",
+      "parent_uuid": "64dad031-fdd4-58d9-b9ea-64e40f2b0a36",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "fa81e068-86e2-5664-9dd9-d597cb1b058f",
+      "asset_type": "wind_farm",
+      "label": "Flex Joint",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Transmission Line Arrester > Flex Joint",
+      "parent_uuid": "64dad031-fdd4-58d9-b9ea-64e40f2b0a36",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "ca74879b-79e6-52bb-80f2-6654fdf05fc6",
+      "asset_type": "wind_farm",
+      "label": "Ground Lead",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Transmission Line Arrester > Ground Lead",
+      "parent_uuid": "64dad031-fdd4-58d9-b9ea-64e40f2b0a36",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "c6f240e3-5dca-5f58-b703-845313236f5e",
+      "asset_type": "wind_farm",
+      "label": "Saddle Camp",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Transmission Line Arrester > Saddle Camp",
+      "parent_uuid": "64dad031-fdd4-58d9-b9ea-64e40f2b0a36",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "e9c07567-3eed-5433-b173-a16d77397314",
+      "asset_type": "wind_farm",
+      "label": "Shunt",
+      "level": 4,
+      "node_path": "Wind Farm > Transmission > Transmission Line Arrester > Shunt",
+      "parent_uuid": "64dad031-fdd4-58d9-b9ea-64e40f2b0a36",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "asset_type": "wind_farm",
+      "label": "Transformers",
+      "level": 2,
+      "node_path": "Wind Farm > Transformers",
+      "parent_uuid": "040f63cd-45f3-576a-a83f-6a770384048d",
+      "children_uuids": [
+        "95a9c3bc-811b-5967-9014-e9d694792e33",
+        "d0ff1132-2322-50bf-993c-27f4ac091976",
+        "3910c65f-5852-56d8-9147-1ff2d1a57b87",
+        "87ea6ef0-19d3-598c-8604-667dc00e538a",
+        "be054b70-9c65-5d7d-9e0b-66cc70e839a3",
+        "a4440389-1c7a-50da-a9de-e88441ddb011",
+        "bd58bbda-b48b-5478-842b-abd0f4d70dde",
+        "4a7d49d8-efa2-5238-8b2f-98e8b0b34033",
+        "f955a85e-600f-5288-8fe1-4170ba4ef7e6",
+        "18dbee87-9ad1-53a4-8325-8d6eb6c398d5",
+        "73347b6d-7363-5bc6-bbe1-915d89ae77f0"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "95a9c3bc-811b-5967-9014-e9d694792e33",
+      "asset_type": "wind_farm",
+      "label": "Breather",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Breather",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "d0ff1132-2322-50bf-993c-27f4ac091976",
+      "asset_type": "wind_farm",
+      "label": "Buchholz Relay",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Buchholz Relay",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "3910c65f-5852-56d8-9147-1ff2d1a57b87",
+      "asset_type": "wind_farm",
+      "label": "Cooling Tubes",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Cooling Tubes",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "87ea6ef0-19d3-598c-8604-667dc00e538a",
+      "asset_type": "wind_farm",
+      "label": "Explosion Vent",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Explosion Vent",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "be054b70-9c65-5d7d-9e0b-66cc70e839a3",
+      "asset_type": "wind_farm",
+      "label": "Insulating Materials",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Insulating Materials",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [
+        "1252155f-eb05-50b8-9727-08dcce0d9293",
+        "1a159a6b-14dc-5632-b9fb-07bfe3ec9b60"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "1252155f-eb05-50b8-9727-08dcce0d9293",
+      "asset_type": "wind_farm",
+      "label": "Cardboard",
+      "level": 4,
+      "node_path": "Wind Farm > Transformers > Insulating Materials > Cardboard",
+      "parent_uuid": "be054b70-9c65-5d7d-9e0b-66cc70e839a3",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "1a159a6b-14dc-5632-b9fb-07bfe3ec9b60",
+      "asset_type": "wind_farm",
+      "label": "Oil Impregnated Paper",
+      "level": 4,
+      "node_path": "Wind Farm > Transformers > Insulating Materials > Oil Impregnated Paper",
+      "parent_uuid": "be054b70-9c65-5d7d-9e0b-66cc70e839a3",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "a4440389-1c7a-50da-a9de-e88441ddb011",
+      "asset_type": "wind_farm",
+      "label": "Laminated Core",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Laminated Core",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "bd58bbda-b48b-5478-842b-abd0f4d70dde",
+      "asset_type": "wind_farm",
+      "label": "Oil Conservator",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Oil Conservator",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "4a7d49d8-efa2-5238-8b2f-98e8b0b34033",
+      "asset_type": "wind_farm",
+      "label": "Tap Changer",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Tap Changer",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "f955a85e-600f-5288-8fe1-4170ba4ef7e6",
+      "asset_type": "wind_farm",
+      "label": "Transformer Oil",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Transformer Oil",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "18dbee87-9ad1-53a4-8325-8d6eb6c398d5",
+      "asset_type": "wind_farm",
+      "label": "Windings",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Windings",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "73347b6d-7363-5bc6-bbe1-915d89ae77f0",
+      "asset_type": "wind_farm",
+      "label": "Step-up Transformer",
+      "level": 3,
+      "node_path": "Wind Farm > Transformers > Step-up Transformer",
+      "parent_uuid": "d475646c-18aa-51c4-a9f7-3cda16959926",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "asset_type": "wind_farm",
+      "label": "Substation",
+      "level": 2,
+      "node_path": "Wind Farm > Substation",
+      "parent_uuid": "040f63cd-45f3-576a-a83f-6a770384048d",
+      "children_uuids": [
+        "40cf8d65-01ce-5cd8-8203-196b74b54dd8",
+        "c68f3924-79dd-539d-b9d7-7591ab5e6797",
+        "80aee68b-a46d-50b6-a6ff-be3745707b30",
+        "afb74a5c-0ce1-5183-bb62-b715e8847ee0",
+        "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+        "71de0bcf-5679-562c-bf51-d50bded735d9",
+        "e93b3a2f-60cc-55ae-b44d-9cf79372407a",
+        "70d5be91-6c30-550a-9c90-ec8192c4c089",
+        "f5daa94c-e87c-5541-be48-a3b02a164a03",
+        "0ddca677-b4d1-54b1-adee-9950dde07287",
+        "2ae29822-3e5c-5e12-9a53-588246cc989b",
+        "813d3f62-3499-5300-977a-6b45d03bcc03"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "40cf8d65-01ce-5cd8-8203-196b74b54dd8",
+      "asset_type": "wind_farm",
+      "label": "Auto-Reclosure Facility",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Auto-Reclosure Facility",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "c68f3924-79dd-539d-b9d7-7591ab5e6797",
+      "asset_type": "wind_farm",
+      "label": "Auxillary Standby Power System",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Auxillary Standby Power System",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "80aee68b-a46d-50b6-a6ff-be3745707b30",
+      "asset_type": "wind_farm",
+      "label": "Breakers",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Breakers",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "afb74a5c-0ce1-5183-bb62-b715e8847ee0",
+      "asset_type": "wind_farm",
+      "label": "Bus Bar",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Bus Bar",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+      "asset_type": "wind_farm",
+      "label": "Circuit Breakers",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Circuit Breakers",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [
+        "0fef616d-ffdd-5e80-b18f-81e6b01c5f2a",
+        "3339743a-d7f4-5591-8bfe-43c49846ae14",
+        "1f2419f2-41e5-58d6-96f5-ce3dbe9f6b20",
+        "f114b5a5-4f03-501d-b85d-009c0e13a954",
+        "a1522382-5474-53d4-ab6e-139a1d40c22f",
+        "934ec8f2-8116-55d0-9b11-3449eb5e4054"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "0fef616d-ffdd-5e80-b18f-81e6b01c5f2a",
+      "asset_type": "wind_farm",
+      "label": "Air Blast Circuit Breaker",
+      "level": 4,
+      "node_path": "Wind Farm > Substation > Circuit Breakers > Air Blast Circuit Breaker",
+      "parent_uuid": "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "3339743a-d7f4-5591-8bfe-43c49846ae14",
+      "asset_type": "wind_farm",
+      "label": "Oil Circuit Breaker",
+      "level": 4,
+      "node_path": "Wind Farm > Substation > Circuit Breakers > Oil Circuit Breaker",
+      "parent_uuid": "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "1f2419f2-41e5-58d6-96f5-ce3dbe9f6b20",
+      "asset_type": "wind_farm",
+      "label": "Relay Coil",
+      "level": 4,
+      "node_path": "Wind Farm > Substation > Circuit Breakers > Relay Coil",
+      "parent_uuid": "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "f114b5a5-4f03-501d-b85d-009c0e13a954",
+      "asset_type": "wind_farm",
+      "label": "SF6 Circuit Breaker",
+      "level": 4,
+      "node_path": "Wind Farm > Substation > Circuit Breakers > SF6 Circuit Breaker",
+      "parent_uuid": "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "a1522382-5474-53d4-ab6e-139a1d40c22f",
+      "asset_type": "wind_farm",
+      "label": "Tripping Coil",
+      "level": 4,
+      "node_path": "Wind Farm > Substation > Circuit Breakers > Tripping Coil",
+      "parent_uuid": "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "934ec8f2-8116-55d0-9b11-3449eb5e4054",
+      "asset_type": "wind_farm",
+      "label": "Vacuum Circuit Breaker",
+      "level": 4,
+      "node_path": "Wind Farm > Substation > Circuit Breakers > Vacuum Circuit Breaker",
+      "parent_uuid": "c98637fd-15b4-5082-96ae-5f59f4b3a2a2",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "71de0bcf-5679-562c-bf51-d50bded735d9",
+      "asset_type": "wind_farm",
+      "label": "Communications Systems",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Communications Systems",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "e93b3a2f-60cc-55ae-b44d-9cf79372407a",
+      "asset_type": "wind_farm",
+      "label": "Control Cable",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Control Cable",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "70d5be91-6c30-550a-9c90-ec8192c4c089",
+      "asset_type": "wind_farm",
+      "label": "Lightning Arresters",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Lightning Arresters",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "f5daa94c-e87c-5541-be48-a3b02a164a03",
+      "asset_type": "wind_farm",
+      "label": "Power Cable",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Power Cable",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "0ddca677-b4d1-54b1-adee-9950dde07287",
+      "asset_type": "wind_farm",
+      "label": "Protection System",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Protection System",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "2ae29822-3e5c-5e12-9a53-588246cc989b",
+      "asset_type": "wind_farm",
+      "label": "Substation Earthing System",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Substation Earthing System",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "813d3f62-3499-5300-977a-6b45d03bcc03",
+      "asset_type": "wind_farm",
+      "label": "Switchgear",
+      "level": 3,
+      "node_path": "Wind Farm > Substation > Switchgear",
+      "parent_uuid": "af3a5c1a-ca05-57d9-909c-36c1ff020264",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "asset_type": "wind_farm",
+      "label": "Wind Turbine",
+      "level": 2,
+      "node_path": "Wind Farm > Wind Turbine",
+      "parent_uuid": "040f63cd-45f3-576a-a83f-6a770384048d",
+      "children_uuids": [
+        "83de294e-f0c9-562e-a57d-d298abfb7c17",
+        "05022e06-358e-5837-beca-5ec7fb4adbcf",
+        "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+        "1f61b7fa-7d39-5737-ab13-b1a94283a03e",
+        "a3af3c41-2c37-57c8-ba61-03b615b89e84",
+        "87ee9336-72d5-5f98-8d5f-ec3fb695112c",
+        "78484c0b-e172-5f4b-a143-068581f47cb2"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "83de294e-f0c9-562e-a57d-d298abfb7c17",
+      "asset_type": "wind_farm",
+      "label": "Wind Vane",
+      "level": 3,
+      "node_path": "Wind Farm > Wind Turbine > Wind Vane",
+      "parent_uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "children_uuids": [
+        "e8f4d78b-13b6-587f-8c3a-fe261da9426a",
+        "c9888f65-077b-50ef-8ffb-1e24c5fda46a"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "e8f4d78b-13b6-587f-8c3a-fe261da9426a",
+      "asset_type": "wind_farm",
+      "label": "Steel",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Wind Vane > Steel",
+      "parent_uuid": "83de294e-f0c9-562e-a57d-d298abfb7c17",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "c9888f65-077b-50ef-8ffb-1e24c5fda46a",
+      "asset_type": "wind_farm",
+      "label": "Copper",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Wind Vane > Copper",
+      "parent_uuid": "83de294e-f0c9-562e-a57d-d298abfb7c17",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "05022e06-358e-5837-beca-5ec7fb4adbcf",
+      "asset_type": "wind_farm",
+      "label": "Anemometer",
+      "level": 3,
+      "node_path": "Wind Farm > Wind Turbine > Anemometer",
+      "parent_uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "children_uuids": [
+        "674b131a-692c-53d9-9972-992dcc4a1057",
+        "6aff76d7-6334-56a5-b406-07d8a75a98c9"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "674b131a-692c-53d9-9972-992dcc4a1057",
+      "asset_type": "wind_farm",
+      "label": "Steel",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Anemometer > Steel",
+      "parent_uuid": "05022e06-358e-5837-beca-5ec7fb4adbcf",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "6aff76d7-6334-56a5-b406-07d8a75a98c9",
+      "asset_type": "wind_farm",
+      "label": "Copper",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Anemometer > Copper",
+      "parent_uuid": "05022e06-358e-5837-beca-5ec7fb4adbcf",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+      "asset_type": "wind_farm",
+      "label": "Nacelle",
+      "level": 3,
+      "node_path": "Wind Farm > Wind Turbine > Nacelle",
+      "parent_uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "children_uuids": [
+        "61501cf0-6258-5771-b8ec-ad9125feccaf",
+        "17e023f7-d881-55e8-8bcb-d2404b132c19",
+        "26c9f551-b99e-5184-8add-33487a203288",
+        "b9c2086e-248c-5e34-b469-0b7e91457117",
+        "b493885e-dee3-5f3d-8499-b90474a4e607",
+        "78f976a6-bfd7-5d2b-b911-5197784466ef"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "61501cf0-6258-5771-b8ec-ad9125feccaf",
+      "asset_type": "wind_farm",
+      "label": "Gearbox Drivetrain",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Nacelle > Gearbox Drivetrain",
+      "parent_uuid": "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "17e023f7-d881-55e8-8bcb-d2404b132c19",
+      "asset_type": "wind_farm",
+      "label": "Yaw System",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Nacelle > Yaw System",
+      "parent_uuid": "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "26c9f551-b99e-5184-8add-33487a203288",
+      "asset_type": "wind_farm",
+      "label": "Brake",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Nacelle > Brake",
+      "parent_uuid": "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "b9c2086e-248c-5e34-b469-0b7e91457117",
+      "asset_type": "wind_farm",
+      "label": "Low-Speed Shaft",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Nacelle > Low-Speed Shaft",
+      "parent_uuid": "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "b493885e-dee3-5f3d-8499-b90474a4e607",
+      "asset_type": "wind_farm",
+      "label": "High-Speed Shaft",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Nacelle > High-Speed Shaft",
+      "parent_uuid": "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "78f976a6-bfd7-5d2b-b911-5197784466ef",
+      "asset_type": "wind_farm",
+      "label": "Controller",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Nacelle > Controller",
+      "parent_uuid": "0985ed3a-37ba-5c81-95bf-113e8d0f7482",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "1f61b7fa-7d39-5737-ab13-b1a94283a03e",
+      "asset_type": "wind_farm",
+      "label": "Rotor",
+      "level": 3,
+      "node_path": "Wind Farm > Wind Turbine > Rotor",
+      "parent_uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "children_uuids": [
+        "546a12f4-35df-5753-b065-6c94dbba4102",
+        "9daf91f5-86e8-51e3-bdfb-b49db40cd1f7"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "546a12f4-35df-5753-b065-6c94dbba4102",
+      "asset_type": "wind_farm",
+      "label": "Blades",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Rotor > Blades",
+      "parent_uuid": "1f61b7fa-7d39-5737-ab13-b1a94283a03e",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "9daf91f5-86e8-51e3-bdfb-b49db40cd1f7",
+      "asset_type": "wind_farm",
+      "label": "Hub",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Rotor > Hub",
+      "parent_uuid": "1f61b7fa-7d39-5737-ab13-b1a94283a03e",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "a3af3c41-2c37-57c8-ba61-03b615b89e84",
+      "asset_type": "wind_farm",
+      "label": "Tower",
+      "level": 3,
+      "node_path": "Wind Farm > Wind Turbine > Tower",
+      "parent_uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "children_uuids": [
+        "d4d7e615-6a0a-5d7d-9121-279ef5dad793",
+        "2e908dbb-c23e-5993-b734-064e917823e8",
+        "6388526b-1582-5d5c-a7c5-1a70dd219b3e"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "d4d7e615-6a0a-5d7d-9121-279ef5dad793",
+      "asset_type": "wind_farm",
+      "label": "Galvanized Steel",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Tower > Galvanized Steel",
+      "parent_uuid": "a3af3c41-2c37-57c8-ba61-03b615b89e84",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "2e908dbb-c23e-5993-b734-064e917823e8",
+      "asset_type": "wind_farm",
+      "label": "Lattice",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Tower > Lattice",
+      "parent_uuid": "a3af3c41-2c37-57c8-ba61-03b615b89e84",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "6388526b-1582-5d5c-a7c5-1a70dd219b3e",
+      "asset_type": "wind_farm",
+      "label": "Concrete",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Tower > Concrete",
+      "parent_uuid": "a3af3c41-2c37-57c8-ba61-03b615b89e84",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "87ee9336-72d5-5f98-8d5f-ec3fb695112c",
+      "asset_type": "wind_farm",
+      "label": "Foundation",
+      "level": 3,
+      "node_path": "Wind Farm > Wind Turbine > Foundation",
+      "parent_uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "children_uuids": [
+        "1b9c392e-b0e4-5494-8d17-c006f534f3b9",
+        "99200d09-df6d-54ca-ba15-1714a5305a8a",
+        "13ffe453-fbaf-50eb-a1bf-ca3d6b1ec705"
+      ],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "1b9c392e-b0e4-5494-8d17-c006f534f3b9",
+      "asset_type": "wind_farm",
+      "label": "Concrete",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Foundation > Concrete",
+      "parent_uuid": "87ee9336-72d5-5f98-8d5f-ec3fb695112c",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "99200d09-df6d-54ca-ba15-1714a5305a8a",
+      "asset_type": "wind_farm",
+      "label": "Anchors",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Foundation > Anchors",
+      "parent_uuid": "87ee9336-72d5-5f98-8d5f-ec3fb695112c",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "13ffe453-fbaf-50eb-a1bf-ca3d6b1ec705",
+      "asset_type": "wind_farm",
+      "label": "Rebar",
+      "level": 4,
+      "node_path": "Wind Farm > Wind Turbine > Foundation > Rebar",
+      "parent_uuid": "87ee9336-72d5-5f98-8d5f-ec3fb695112c",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    },
+    {
+      "uuid": "78484c0b-e172-5f4b-a143-068581f47cb2",
+      "asset_type": "wind_farm",
+      "label": "Access Road",
+      "level": 3,
+      "node_path": "Wind Farm > Wind Turbine > Access Road",
+      "parent_uuid": "c6d1087a-aea0-53e5-8f6f-68739ab3ae8c",
+      "children_uuids": [],
+      "metadata": {
+        "created_date": "2025-10-08T14:02:59.633875",
+        "source": "baseline_decomposition"
+      }
+    }
+  ]
+}

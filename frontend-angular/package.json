@@ -1,0 +1,73 @@
+{
+  "name": "frontend-angular",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --proxy-config proxy.config.json",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/cdk": "^20.2.2",
+    "@angular/common": "^20.1.0",
+    "@angular/compiler": "^20.1.0",
+    "@angular/core": "^20.1.0",
+    "@angular/forms": "^20.1.0",
+    "@angular/localize": "^20.1.0",
+    "@angular/material": "^20.2.2",
+    "@angular/platform-browser": "^20.1.0",
+    "@angular/router": "^20.1.0",
+    "@arcgis/core": "^4.33.14",
+    "@arcgis/map-components": "^4.33.20",
+    "@progress/kendo-angular-buttons": "20.0.3",
+    "@progress/kendo-angular-common": "20.0.3",
+    "@progress/kendo-angular-icons": "20.0.3",
+    "@progress/kendo-angular-intl": "20.0.3",
+    "@progress/kendo-angular-l10n": "20.0.3",
+    "@progress/kendo-angular-layout": "^20.0.3",
+    "@progress/kendo-angular-progressbar": "20.0.3",
+    "@progress/kendo-licensing": "^1.7.1",
+    "@progress/kendo-svg-icons": "^4.0.0",
+    "@progress/kendo-theme-default": "12.0.0",
+    "@terraformer/arcgis": "^2.1.2",
+    "@types/terraformer__arcgis": "^2.0.5",
+    "angular-plotly.js": "^20.0.0",
+    "d3-scale-chromatic": "^3.1.0",
+    "esri-loader": "^3.7.0",
+    "ngx-spinner": "^19.0.0",
+    "plotly.js-dist-min": "^3.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.1.6",
+    "@angular/cli": "^20.1.6",
+    "@angular/compiler-cli": "^20.1.0",
+    "@types/d3-scale-chromatic": "^3.1.0",
+    "@types/jasmine": "~5.1.0",
+    "@types/plotly.js-dist-min": "^2.3.4",
+    "eslint": "^9.34.0",
+    "jasmine-core": "~5.8.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.8.2"
+  }
+}

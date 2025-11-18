@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+
+:host {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary),
+      container-text-color: var(--mat-sys-on-primary),
+    )
+  );
+}
+
+.toolbar-icon {
+  @include mat.icon-overrides(
+    (
+      color: var(--mat-sys-on-primary),
+    )
+  );
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.home-link {
+  cursor: pointer;
+}

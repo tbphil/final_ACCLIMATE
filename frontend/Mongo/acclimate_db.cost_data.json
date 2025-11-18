@@ -1,0 +1,150 @@
+[{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c66"
+  },
+  "cost_category": "replacement",
+  "uuid": "2dc8d5d6-ef93-4abd-a573-a6cd274fbc31",
+  "base_year": 2024,
+  "capex_usd": 9000,
+  "component_type": "surge_arrester",
+  "quantity_expr": null,
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://peguru.com/2019/08/surge-arrester/"
+},
+{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c67"
+  },
+  "cost_category": "replacement",
+  "uuid": "11bf6f0d-11c9-42ee-9498-727ea65fb625",
+  "base_year": 2024,
+  "capex_usd": 165000,
+  "component_type": "circuit_breaker",
+  "quantity_expr": {
+    "expr": "lines * 2"
+  },
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://peguru.com/2019/08/circuit-breaker/"
+},
+{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c68"
+  },
+  "cost_category": "replacement",
+  "uuid": "82f97adf-76a9-4882-80be-eda1b5ae78fd",
+  "base_year": 2024,
+  "capex_usd": 117500,
+  "component_type": "current_transformer",
+  "quantity_expr": null,
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://cdn.misoenergy.org/Transmission%20Cost%20Estimation%20Guide.pdf"
+},
+{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c69"
+  },
+  "cost_category": "replacement",
+  "uuid": "d658b486-2a8e-4579-baa6-ec4ce6a660ff",
+  "base_year": 2024,
+  "capex_usd": 165000,
+  "component_type": "circuit_breaker",
+  "quantity_expr": {
+    "expr": "lines * 2"
+  },
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://peguru.com/2019/08/circuit-breaker/"
+},
+{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c6a"
+  },
+  "uuid": "1b09306c-ad7e-450b-bf90-a15a883b8e76",
+  "cost_category": "replacement",
+  "base_year": 2024,
+  "capex_usd": 33000,
+  "component_type": "bus_disconnector",
+  "quantity_expr": null,
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://peguru.com/2019/08/disconnect-switch/"
+},
+{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c6b"
+  },
+  "cost_category": "replacement",
+  "uuid": "d6775846-64a3-4ad5-b0e2-f06c9d1e4436",
+  "base_year": 2024,
+  "capex_usd": 25000,
+  "component_type": "wave_trap",
+  "quantity_expr": {
+    "expr": "lines"
+  },
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://peguru.com/2019/08/wave-trap/"
+},
+{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c6c"
+  },
+  "uuid": "0afd8a94-c219-4aeb-ac59-561f663c3248",
+  "cost_category": "replacement",
+  "base_year": 2024,
+  "capex_usd": 85000,
+  "component_type": "circuit_switcher",
+  "quantity_expr": null,
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://peguru.com/2019/08/circuit-switcher/"
+},
+{
+  "_id": {
+    "$oid": "6813b1ca9b5858538bdd5c6d"
+  },
+  "uuid": "7c82d055-06ab-4893-8ede-4d917cfe8c45",
+  "cost_category": "replacement",
+  "base_year": 2024,
+  "capex_usd": 1100000,
+  "component_type": "capacitor_bank",
+  "quantity_expr": null,
+  "region": "US-average",
+  "selector": {
+    "field": "max_voltage",
+    "min_value": 120,
+    "max_value": 170
+  },
+  "source": "https://peguru.com/2019/08/capacitor-bank/"
+}]

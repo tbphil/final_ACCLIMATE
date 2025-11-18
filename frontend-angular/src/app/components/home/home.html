@@ -1,0 +1,19 @@
+<kendo-splitter style="height: calc(100vh - 64px)">
+  <kendo-splitter-pane [collapsible]="true" size="400px">
+    <div class="pane-content">
+      <app-stepper></app-stepper>
+    </div>
+  </kendo-splitter-pane>
+
+  <kendo-splitter-pane>
+    <div class="pane-content">
+      <app-map></app-map>
+    </div>
+  </kendo-splitter-pane>
+
+  <kendo-splitter-pane [collapsible]="true" size="400px" (sizeChange)="paneResized($event)">
+    <div class="pane-content">
+      <app-analysis></app-analysis>
+    </div>
+  </kendo-splitter-pane>
+</kendo-splitter>

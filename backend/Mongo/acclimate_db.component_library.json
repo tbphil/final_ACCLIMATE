@@ -1,0 +1,1137 @@
+[{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6cc"
+  },
+  "canonical_name": "Battery",
+  "component_type": "Battery",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Battery"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.452287"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6cd"
+  },
+  "canonical_name": "Biodiesel Production Plant",
+  "component_type": "Biodiesel Production Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Biodiesel Production Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.452832"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6ce"
+  },
+  "canonical_name": "Biogas Upgrading Plant",
+  "component_type": "Biogas Upgrading Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Biogas Upgrading Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.453866"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6cf"
+  },
+  "canonical_name": "Capacitor Station",
+  "component_type": "Capacitor Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Capacitor Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.453866"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d0"
+  },
+  "canonical_name": "Circuit (Line)",
+  "component_type": "Circuit (Line)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Circuit (Line)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.454837"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d1"
+  },
+  "canonical_name": "City Gate Station",
+  "component_type": "City Gate Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "City Gate Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.454837"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d2"
+  },
+  "canonical_uuid": "ba1fbe2f-063e-5223-b921-1faad1948ecd",
+  "canonical_name": "Coal Fired Generation Plant",
+  "component_type": "Coal Fired Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Coal Power Plant",
+    "Coal Plant"
+  ],
+  "hbom_baseline_uuid": "3c50ab26-dac5-5da6-a9d5-25f2e808daa0",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.609813",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d3"
+  },
+  "canonical_name": "Coal Mine",
+  "component_type": "Coal Mine",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Coal Mine"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.456996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d4"
+  },
+  "canonical_name": "Coal Surface Mine",
+  "component_type": "Coal Surface Mine",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Coal Surface Mine"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.458029"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d5"
+  },
+  "canonical_name": "Coal Terminal",
+  "component_type": "Coal Terminal",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Coal Terminal"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.458029"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d6"
+  },
+  "canonical_name": "Coal Underground Mine",
+  "component_type": "Coal Underground Mine",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Coal Underground Mine"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.458996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d7"
+  },
+  "canonical_name": "Combined Heat Power Plant",
+  "component_type": "Combined Heat Power Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Combined Heat Power Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.458996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d8"
+  },
+  "canonical_name": "Compressed Natural Gas (CNG) Plant",
+  "component_type": "Compressed Natural Gas (CNG) Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Compressed Natural Gas (CNG) Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.459996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6d9"
+  },
+  "canonical_name": "Concentrated Solar",
+  "component_type": "Concentrated Solar",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Concentrated Solar"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.459996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6da"
+  },
+  "canonical_name": "Crude Oil Gathering Pipeline",
+  "component_type": "Crude Oil Gathering Pipeline",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Oil Gathering Pipeline"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.461028"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6db"
+  },
+  "canonical_name": "Crude Oil Production Facility",
+  "component_type": "Crude Oil Production Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Oil Production Facility"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.461995"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6dc"
+  },
+  "canonical_name": "Crude Oil Pumping Station",
+  "component_type": "Crude Oil Pumping Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Oil Pumping Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.461995"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6dd"
+  },
+  "canonical_name": "Crude Oil Storage (Terminal)",
+  "component_type": "Crude Oil Storage (Terminal)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Oil Storage (Terminal)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.463000"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6de"
+  },
+  "canonical_name": "Crude Oil System",
+  "component_type": "Crude Oil System",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Oil System"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.463996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6df"
+  },
+  "canonical_name": "Crude Oil Transmission Pipeline",
+  "component_type": "Crude Oil Transmission Pipeline",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Oil Transmission Pipeline"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.463996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e0"
+  },
+  "canonical_name": "Crude Oil Valve Station",
+  "component_type": "Crude Oil Valve Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Oil Valve Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.464996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e1"
+  },
+  "canonical_name": "Crude Underground Storage Cavern",
+  "component_type": "Crude Underground Storage Cavern",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Crude Underground Storage Cavern"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.464996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e2"
+  },
+  "canonical_name": "Direct Current Converter Station",
+  "component_type": "Direct Current Converter Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Direct Current Converter Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.466029"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e3"
+  },
+  "canonical_name": "Dispatch and Control Center (Electricity)",
+  "component_type": "Dispatch and Control Center (Electricity)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Dispatch and Control Center (Electricity)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.466997"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e4"
+  },
+  "canonical_uuid": "380575d2-ee8b-5406-a7df-a6ed881cb61e",
+  "canonical_name": "Distillate Fuel Oil Generation Plant",
+  "component_type": "Distillate Fuel Oil Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Distillate Fuel Oil Generation Plant"
+  ],
+  "hbom_baseline_uuid": "13af3793-90d2-5c93-a80f-f31348dd5067",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.610781",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e5"
+  },
+  "canonical_name": "Electric System Facility",
+  "component_type": "Electric System Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Electric System Facility"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.467995"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e6"
+  },
+  "canonical_name": "Energy Systems",
+  "component_type": "Energy Systems",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Energy Systems"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.469001"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e7"
+  },
+  "canonical_name": "Ethanol Production Plant",
+  "component_type": "Ethanol Production Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Ethanol Production Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.470001"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e8"
+  },
+  "canonical_name": "Flywheel",
+  "component_type": "Flywheel",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Flywheel"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.471001"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6e9"
+  },
+  "canonical_name": "Fossil Fuel Generation Plant",
+  "component_type": "Fossil Fuel Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Fossil Fuel Generation Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.471996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6ea"
+  },
+  "canonical_name": "Fuel Cell",
+  "component_type": "Fuel Cell",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Fuel Cell"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.471996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6eb"
+  },
+  "canonical_uuid": "caffd7e9-b5fe-5f51-bd18-19c93987f092",
+  "canonical_name": "Generation Plant",
+  "component_type": "Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Generation Plant"
+  ],
+  "hbom_baseline_uuid": "e8baaac9-dddb-5219-b3f1-87c37490249b",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.612786",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6ec"
+  },
+  "canonical_uuid": "6df6ade0-2c22-51c6-8114-f8e2d41f73b7",
+  "canonical_name": "Geothermal Generation Plant",
+  "component_type": "Geothermal Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Geothermal Generation Plant"
+  ],
+  "hbom_baseline_uuid": "570d9dfc-2d11-5618-a80b-38e16ef425ca",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.614365",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6ed"
+  },
+  "canonical_name": "Hydroelectric Facility",
+  "component_type": "Hydroelectric Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Hydroelectric Facility"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.473997"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6ee"
+  },
+  "canonical_name": "Hydroelectric Pump Storage Facility",
+  "component_type": "Hydroelectric Pump Storage Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Hydroelectric Pump Storage Facility"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.475028"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6ef"
+  },
+  "canonical_uuid": "7d909633-fe34-5785-ab04-f7fcd9fb3bd0",
+  "canonical_name": "Landfill Gas Plant",
+  "component_type": "Landfill Gas Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Landfill Gas Plant"
+  ],
+  "hbom_baseline_uuid": "73df4c2f-1990-5c21-8a25-6e39a539c985",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.619541",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f0"
+  },
+  "canonical_name": "Line Riser",
+  "component_type": "Line Riser",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Line Riser"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.476027"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f1"
+  },
+  "canonical_name": "Line Tap",
+  "component_type": "Line Tap",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Line Tap"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.477020"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f2"
+  },
+  "canonical_name": "Liquefied Natural Gas Plant",
+  "component_type": "Liquefied Natural Gas Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Liquefied Natural Gas Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.477020"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f3"
+  },
+  "canonical_name": "Liquefied Natural Gas Storage (Terminal)",
+  "component_type": "Liquefied Natural Gas Storage (Terminal)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Liquefied Natural Gas Storage (Terminal)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.477996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f4"
+  },
+  "canonical_name": "NERC Reliability Coordinator",
+  "component_type": "NERC Reliability Coordinator",
+  "sector": "Energy Grid",
+  "aliases": [
+    "NERC Reliability Coordinator"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.478995"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f5"
+  },
+  "canonical_name": "Natural Gas Compressor Station",
+  "component_type": "Natural Gas Compressor Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Compressor Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.478995"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f6"
+  },
+  "canonical_name": "Natural Gas Distribution System",
+  "component_type": "Natural Gas Distribution System",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Distribution System"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.479994"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f7"
+  },
+  "canonical_name": "Natural Gas Fuel Cell",
+  "component_type": "Natural Gas Fuel Cell",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Fuel Cell"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.480996"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f8"
+  },
+  "canonical_name": "Natural Gas Gathering Pipeline",
+  "component_type": "Natural Gas Gathering Pipeline",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Gathering Pipeline"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.481998"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6f9"
+  },
+  "canonical_uuid": "993221d8-1774-533c-aea5-f47e5ca33cbd",
+  "canonical_name": "Natural Gas Generation Plant",
+  "component_type": "Natural Gas Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Gas Power Plant",
+    "NGCC",
+    "Gas Plant"
+  ],
+  "hbom_baseline_uuid": "4b306415-70d7-5700-b5d5-f3d522a027c4",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.620551",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6fa"
+  },
+  "canonical_name": "Natural Gas Liquids Pipeline (HVL)",
+  "component_type": "Natural Gas Liquids Pipeline (HVL)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Liquids Pipeline (HVL)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.484013"
+},
+{
+  "_id": {
+    "$oid": "68e3e4eaf31352895c26c6fb"
+  },
+  "canonical_name": "Natural Gas Liquids Pump Station (HVL)",
+  "component_type": "Natural Gas Liquids Pump Station (HVL)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Liquids Pump Station (HVL)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.485022"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c6fc"
+  },
+  "canonical_name": "Natural Gas Liquids Storage Facility (HVL)",
+  "component_type": "Natural Gas Liquids Storage Facility (HVL)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Liquids Storage Facility (HVL)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.486020"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c6fd"
+  },
+  "canonical_name": "Natural Gas Market Hub",
+  "component_type": "Natural Gas Market Hub",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Market Hub"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.487027"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c6fe"
+  },
+  "canonical_name": "Natural Gas Processing Plant",
+  "component_type": "Natural Gas Processing Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Processing Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.488024"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c6ff"
+  },
+  "canonical_name": "Natural Gas Storage Facility",
+  "component_type": "Natural Gas Storage Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Storage Facility"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.490022"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c700"
+  },
+  "canonical_name": "Natural Gas System",
+  "component_type": "Natural Gas System",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas System"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.491029"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c701"
+  },
+  "canonical_name": "Natural Gas Transmission Pipeline",
+  "component_type": "Natural Gas Transmission Pipeline",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Transmission Pipeline"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.492019"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c702"
+  },
+  "canonical_name": "Natural Gas Valve Station",
+  "component_type": "Natural Gas Valve Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Natural Gas Valve Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.493017"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c703"
+  },
+  "canonical_uuid": "e23b6581-6499-54db-8bd0-c9574083f830",
+  "canonical_name": "Nuclear Generation Plant",
+  "component_type": "Nuclear Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Nuclear Plant",
+    "Nuclear Power Plant"
+  ],
+  "hbom_baseline_uuid": "203b6c3f-1c46-5e5c-98d1-7d79deff6784",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.621600",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c704"
+  },
+  "canonical_name": "Oil and Gas Platform",
+  "component_type": "Oil and Gas Platform",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Oil and Gas Platform"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.494018"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c705"
+  },
+  "canonical_name": "Oil and Gas Production Well",
+  "component_type": "Oil and Gas Production Well",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Oil and Gas Production Well"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.495023"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c706"
+  },
+  "canonical_name": "Petroleum Product Pipeline",
+  "component_type": "Petroleum Product Pipeline",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Petroleum Product Pipeline"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.496024"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c707"
+  },
+  "canonical_name": "Petroleum Product Pump Station",
+  "component_type": "Petroleum Product Pump Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Petroleum Product Pump Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.498022"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c708"
+  },
+  "canonical_name": "Petroleum Product Storage (Terminal)",
+  "component_type": "Petroleum Product Storage (Terminal)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Petroleum Product Storage (Terminal)"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.499023"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c709"
+  },
+  "canonical_name": "Petroleum Product System",
+  "component_type": "Petroleum Product System",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Petroleum Product System"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.499023"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c70a"
+  },
+  "canonical_name": "Petroleum Product Valve Station",
+  "component_type": "Petroleum Product Valve Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Petroleum Product Valve Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.501248"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c70b"
+  },
+  "canonical_name": "Petroleum Refinery",
+  "component_type": "Petroleum Refinery",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Petroleum Refinery"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.502291"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c70c"
+  },
+  "canonical_name": "Photovoltaic",
+  "component_type": "Photovoltaic",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Photovoltaic"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.503243"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c70d"
+  },
+  "canonical_name": "Propane Storage Facility",
+  "component_type": "Propane Storage Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Propane Storage Facility"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.504243"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c70e"
+  },
+  "canonical_name": "Regulator Station",
+  "component_type": "Regulator Station",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Regulator Station"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.504243"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c70f"
+  },
+  "canonical_name": "Renewable Generation Plant",
+  "component_type": "Renewable Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Renewable Generation Plant"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.505243"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c710"
+  },
+  "canonical_uuid": "55fa45db-8498-5a87-b820-c7a13bb96f8d",
+  "canonical_name": "Solar Generation Facility",
+  "component_type": "Solar Generation Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Solar Farm",
+    "Solar Plant",
+    "Solar Power Plant"
+  ],
+  "hbom_baseline_uuid": "9958e1d9-83a9-5be4-84db-26abee2e83fd",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.623679",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c711"
+  },
+  "canonical_uuid": "b19734b9-27e6-534c-9f2b-50a254d391bc",
+  "canonical_name": "Solid Waste Generation Plant",
+  "component_type": "Solid Waste Generation Plant",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Solid Waste Generation Plant"
+  ],
+  "hbom_baseline_uuid": "d4abf836-d30d-50c8-8dd8-e418e3248c64",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.626687",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c712"
+  },
+  "canonical_uuid": "a19295dd-7f70-5a7e-9a3e-72163be2b24d",
+  "canonical_name": "Substation",
+  "component_type": "Substation",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Power Station",
+    "Electrical Substation",
+    "Switching Station"
+  ],
+  "hbom_baseline_uuid": "f8374851-ef5d-5ce5-8bb0-c9be609eb363",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.628701",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c713"
+  },
+  "canonical_name": "Thermal Energy Storage",
+  "component_type": "Thermal Energy Storage",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Thermal Energy Storage"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.508242"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c714"
+  },
+  "canonical_name": "Transmission Dead-End",
+  "component_type": "Transmission Dead-End",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Transmission Dead-End"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.509278"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c715"
+  },
+  "canonical_name": "Transmission Tower",
+  "component_type": "Transmission Tower",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Transmission Tower"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.510275"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c716"
+  },
+  "canonical_name": "Transmission and Distribution System",
+  "component_type": "Transmission and Distribution System",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Transmission and Distribution System"
+  ],
+  "created_at": "2025-10-06T07:53:56.869859",
+  "last_updated": "2025-10-06T11:18:20.510275"
+},
+{
+  "_id": {
+    "$oid": "68e3e4ebf31352895c26c717"
+  },
+  "canonical_uuid": "acf670e2-8300-53ea-834e-df2540a15e31",
+  "canonical_name": "Wind Farm",
+  "component_type": "Wind Farm",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Wind Power Plant",
+    "Wind Generation Facility"
+  ],
+  "hbom_baseline_uuid": "040f63cd-45f3-576a-a83f-6a770384048d",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-06T07:53:56.869859",
+  "updated_at": "2025-10-08T14:53:51.630710",
+  "updated_by": "canonical_registry_builder"
+},
+{
+  "_id": {
+    "$oid": "68e40b29f31352895c290c66"
+  },
+  "canonical_name": "Industrial & Medical Facilities",
+  "component_type": "Industrial & Medical Facilities",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Industrial & Medical Facilities"
+  ],
+  "created_at": "2025-10-06T09:50:26.504980",
+  "last_updated": "2025-10-06T12:32:09.052211"
+},
+{
+  "_id": {
+    "$oid": "68e40b29f31352895c290c67"
+  },
+  "canonical_name": "Nuclear Fuel Fabrication",
+  "component_type": "Nuclear Fuel Fabrication",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Nuclear Fuel Fabrication"
+  ],
+  "created_at": "2025-10-06T09:50:26.504980",
+  "last_updated": "2025-10-06T12:32:09.053217"
+},
+{
+  "_id": {
+    "$oid": "68e40b29f31352895c290c68"
+  },
+  "canonical_name": "Nuclear Materials Transport",
+  "component_type": "Nuclear Materials Transport",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Nuclear Materials Transport"
+  ],
+  "created_at": "2025-10-06T09:50:26.504980",
+  "last_updated": "2025-10-06T12:32:09.053217"
+},
+{
+  "_id": {
+    "$oid": "68e40b29f31352895c290c69"
+  },
+  "canonical_name": "Nuclear Research and Test Reactors",
+  "component_type": "Nuclear Research and Test Reactors",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Nuclear Research and Test Reactors"
+  ],
+  "created_at": "2025-10-06T09:50:26.504980",
+  "last_updated": "2025-10-06T12:32:09.054216"
+},
+{
+  "_id": {
+    "$oid": "68e40b29f31352895c290c6a"
+  },
+  "canonical_name": "Nuclear Waste Processing and Disposal Facility (Storage)",
+  "component_type": "Nuclear Waste Processing and Disposal Facility (Storage)",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Nuclear Waste Processing and Disposal Facility (Storage)"
+  ],
+  "created_at": "2025-10-06T09:50:26.504980",
+  "last_updated": "2025-10-06T12:32:09.054216"
+},
+{
+  "_id": {
+    "$oid": "68e40b29f31352895c290c6b"
+  },
+  "canonical_name": "Uranium Enrichment Facility",
+  "component_type": "Uranium Enrichment Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Uranium Enrichment Facility"
+  ],
+  "created_at": "2025-10-06T09:50:26.504980",
+  "last_updated": "2025-10-06T12:32:09.055216"
+},
+{
+  "_id": {
+    "$oid": "68e6cf5ff31352895c290cbe"
+  },
+  "canonical_uuid": "0b482e85-2439-5c6a-aacb-ecef8e69acfe",
+  "canonical_name": "Hydroelectric Power Generation Facility",
+  "component_type": "Hydroelectric Power Generation Facility",
+  "sector": "Energy Grid",
+  "aliases": [
+    "Hydro Plant",
+    "Hydroelectric Facility"
+  ],
+  "hbom_baseline_uuid": "8dc4a5ad-f064-5ac2-a422-846a1d1ff823",
+  "hbom_duplicate_count": 1,
+  "created_at": "2025-10-08T14:53:51.616410",
+  "updated_at": "2025-10-08T14:53:51.616410",
+  "updated_by": "canonical_registry_builder"
+}]

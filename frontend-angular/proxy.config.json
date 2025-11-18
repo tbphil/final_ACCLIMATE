@@ -1,0 +1,8 @@
+[
+  {
+    "context": ["/api"],
+    "target": "http://python_web_service:8000",
+    "secure": false,
+    "ws": true
+  }
+]

@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+/* CSS Variables for Color Palette */
+:root {
+  /* Primary Colors */
+  --primary-blue: #07519E;
+  --success-green: #8dc340;
+  --light-blue: #2ba8e0;
+  --error-red: #cf1e4c;
+  --warning-orange: #f68c20;
+  --highlight-purple: #83236A;
+  --light-gray: #dcddde;
+
+  /* Additional Variables */
+  --form-bg-color: #ffffff;
+  --input-border-color: #ced4da;
+  --input-focus-border: var(--light-blue);
+  --label-color: #495057;
+  --text-color: #212529;
+  --button-bg-color: var(--primary-blue);
+  --button-hover-bg-color: var(--light-blue);
+  --error-color: var(--error-red);
+  --success-color: var(--success-green);
+  --spinner-border-color: var(--light-blue);
+  --spinner-bg-color: rgba(43, 168, 224, 0.2); /* Semi-transparent light blue */
+}
+
+/* Global Layout */
+body, html, #app {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh; /* Allow the layout to grow */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+.header {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0 10px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-logo {
+  height: 100%;
+  padding: 2px 10px;
+  box-sizing: border-box;
+}
+.header-word,
+.header-acclimate {
+  cursor: pointer;      /* show pointer on hover */
+  color: white;         /* ensure text is white against dark background */
+  text-decoration: none; 
+  font-size: 1rem;      /* base font size for the smaller words */
+  font-family: 'Open Sans', sans-serif; /* or your chosen font */
+}
+
+/* Make ACCLIMATE bigger and bolder */
+.header-acclimate {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Optional hover effect to lighten text a bit */
+.header-word:hover,
+.header-acclimate:hover {
+  color: #ccc;
+}
+
+/* Adjust the logos if needed */
+.header-logo {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 2px 10px; /* or as needed */
+}
+.content-wrapper {
+  padding-top: 5vh; /* exactly the header height */
+}
+
+/* Map Section Container and Leaflet Map */
+.map-section-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex: 1; /* Allow it to fill remaining space */
+  transition: height 0.3s ease;
+}
+
+.map-wrapper {
+  transition: height 0.3s ease;
+  display: flex; /* So the MapSection can fill it */
+  flex-direction: column;
+}
+
+/* Before data loads: fill the entire column */
+.map-full {
+  flex: 1 1 auto;
+}
+
+.map-partial {
+  flex: 0 0 50%;
+  max-height: 50%;
+}
+
+.leaflet-map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Spinner Styles */
+.spinner {
+  border: 16px solid var(--primary-blue);
+  border-top: 16px solid var(--light-blue);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Legend Styles */
+.legend {
+    /* make the box a bit larger than its contents */
+  padding: 10px 14px;           /* ⬅️ increase for more “air” */
+  background: rgba(255,255,255,0.95);
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  width: max-content;           /* grow just enough for the inside */
+}
+
+
+.legend-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.legend-scale {
+  display: flex;
+  gap: 3px;                     /* space between the little boxes */
+  margin-bottom: 6px;
+}
+
+.legend-scale div {
+  flex: 1 1 16px;               /* all squares equal width, 16 px high  */
+  height: 16px;
+}
+
+.legend-scale div + div {
+  margin-left: 2px;
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between; /* left / right aligned */
+  min-width: 120px;
+}
+
+#legend .legend-labels span {
+  white-space: nowrap;             /* prevent wrapping */
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.modal-logo {
+  height: 80px;  /* Adjust this size as needed */
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.info-bar {
+  position: fixed;
+  top: 5vh;        /* below your header */
+  right: 0;
+  bottom: 0;
+  width: 350px;
+  overflow-y: auto;
+}
+
+.slide-panel-container {
+  position: fixed;
+  top: 5vh;       /* below header */
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none; /* container does not intercept clicks */
+}
+
+.slide-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* hidden by default */
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+.slide-panel.open {
+  transform: translateX(0%);
+}
+
+.panel-tab {
+  position: absolute;
+  left: -25px;  /* Stick out from the panel edge */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 60px;
+  background-color: #ddd;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
